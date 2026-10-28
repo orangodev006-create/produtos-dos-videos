@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Os produtos dos vídeos: 50 achados gamer da Shopee, do baratinho ao premium: placas de vídeo, monitores, teclados, cadeiras e mais. Links de afiliado (#publi).">
+<meta name="theme-color" content="#0a0916">
+<meta property="og:title" content="Produtos dos Vídeos">
+<meta property="og:description" content="Os produtos dos vídeos: 50 achados gamer da Shopee, do baratinho ao premium: placas de vídeo, monitores, teclados, cadeiras e mais. Links de afiliado (#publi).">
+<meta property="og:type" content="website">
+<title>Produtos dos Vídeos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabeçalho fixo, topo com título à esquerda e "setup" montado com fotos reais à direita,
+   filtros, seções por categoria com cards horizontais (foto | dados | preço).
+   Detalhe do produto: palco grande com a foto, ficha de compra, "Sobre este produto" e outros da categoria.
+   Visual escuro neon por escolha. */
+:root {
+  --bg: #0a0916; --bg2: #100e22; --panel: #131129; --panel2: #1a1735; --line: #272449; --line2: #35316a;
+  --fg: #eeedf8; --muted: #a29fc6; --pink: #ff2e93; --pink2: #ff5aa9; --cyan: #23d5f0; --amber: #ffc23d; --violet: #a77bff;
+  --display: "Russo One", "Arial Black", system-ui, sans-serif;
+  --head: "Chakra Petch", "Arial Narrow", system-ui, sans-serif;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px)); }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.45; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+.ic { width: 20px; height: 20px; flex: none; }
+.ic.sm { width: 16px; height: 16px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+
+/* cabeçalho */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 28px; min-height: 72px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: var(--display); font-size: 22px; letter-spacing: .01em; white-space: nowrap; }
+.logo .ic { width: 40px; height: 40px; color: var(--pink); filter: drop-shadow(0 0 8px color-mix(in srgb, var(--pink) 60%, transparent)); }
+.logo b { color: var(--pink); font-weight: 400; }
+.nav { display: flex; gap: 6px; margin-left: auto; }
+.nav a { display: flex; align-items: center; gap: 8px; padding: 22px 12px; text-decoration: none; color: var(--muted); font-family: var(--head); font-weight: 600; font-size: 15px; border-bottom: 2px solid transparent; }
+.nav a:hover, .nav a.on { color: var(--fg); border-bottom-color: var(--pink); }
+.guia { display: flex; align-items: center; gap: 8px; padding: 10px 18px; border: 1.5px solid var(--pink); border-radius: 999px; text-decoration: none; font-family: var(--head); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--fg); white-space: nowrap; box-shadow: 0 0 18px color-mix(in srgb, var(--pink) 25%, transparent) inset; }
+.guia .ic { color: var(--pink); }
+.guia:hover { background: color-mix(in srgb, var(--pink) 15%, transparent); }
+
+/* topo */
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background:
+  radial-gradient(60% 90% at 78% 40%, color-mix(in srgb, var(--pink) 22%, transparent), transparent 70%),
+  radial-gradient(40% 60% at 95% 90%, color-mix(in srgb, #7b3cff 30%, transparent), transparent 70%), var(--bg2); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: 24px; padding-block: 44px 40px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 10px; font-family: var(--head); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-size: 14px; }
+.eyebrow::before { content: ""; width: 34px; height: 3px; border-radius: 2px; background: var(--pink); }
+.hero h1 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: .95; text-transform: uppercase; text-wrap: balance; }
+.hero h1 span { display: block; color: var(--pink); text-shadow: 0 0 28px color-mix(in srgb, var(--pink) 45%, transparent); }
+.hero .lead { margin: 18px 0 0; color: #c9c6e6; font-size: 18px; max-width: 34ch; }
+.nums { display: flex; flex-wrap: wrap; gap: 14px 30px; margin: 22px 0 0; padding: 0; list-style: none; font-size: 17px; }
+.nums li { display: flex; align-items: center; gap: 10px; }
+.nums .ic { width: 26px; height: 26px; color: var(--pink); }
+.art { position: relative; aspect-ratio: 16 / 10; max-width: 100%; }
+.art::before { content: ""; position: absolute; inset: 8% 4% 0; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--pink) 30%, transparent), transparent); filter: blur(10px); }
+.art::after { content: ""; position: absolute; left: 6%; right: 2%; bottom: 6%; height: 3px; border-radius: 3px; background: linear-gradient(90deg, transparent, var(--pink), var(--cyan), transparent); box-shadow: 0 0 22px var(--pink); opacity: .8; }
+.art img { position: absolute; object-fit: contain; filter: drop-shadow(0 12px 24px rgba(0,0,0,.6)); }
+.h-mon { left: 14%; top: 0; width: 58%; }
+.h-case { right: 0; top: 2%; width: 30%; filter: drop-shadow(0 0 22px color-mix(in srgb, var(--pink) 45%, transparent)) !important; }
+.h-kb { left: 10%; bottom: 7%; width: 50%; }
+.h-hs { left: 0; bottom: 8%; width: 20%; }
+.h-ms { left: 60%; bottom: 7%; width: 13%; }
+
+/* aviso */
+.publi { display: flex; align-items: center; gap: 14px; margin: 20px 0 0; padding: 14px 18px; border: 1px solid var(--line2); border-radius: 14px; background: var(--panel); text-decoration: none; }
+.publi > .ic { width: 26px; height: 26px; color: var(--pink); }
+.publi p { margin: 0; color: var(--muted); font-size: 15px; }
+.publi strong { color: var(--fg); }
+.publi .ic:last-child { margin-left: auto; color: var(--muted); }
+
+/* filtros */
+.filtros { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; margin-top: 20px; }
+.campo { position: relative; display: flex; align-items: center; }
+.campo .ic { position: absolute; left: 16px; color: var(--muted); pointer-events: none; }
+.campo input, .campo select { width: 100%; font: inherit; font-size: 16px; color: var(--fg); background: var(--panel); border: 1px solid var(--line2); border-radius: 12px; padding: 14px 16px 14px 48px; }
+.campo input::placeholder { color: var(--muted); }
+.campo select { appearance: none; padding-right: 44px; cursor: pointer; min-width: 220px; }
+.campo .ic.dd { left: auto; right: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.chip { display: inline-flex; align-items: center; gap: 9px; font-size: 15px; color: var(--fg); background: var(--panel); border: 1px solid var(--line2); border-radius: 999px; padding: 10px 18px; cursor: pointer; }
+.chip .ic { color: var(--muted); }
+.chip b { font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip:hover { border-color: var(--pink); }
+.chip.on { background: var(--pink); border-color: var(--pink); color: #fff; box-shadow: 0 0 20px color-mix(in srgb, var(--pink) 45%, transparent); }
+.chip.on .ic, .chip.on b { color: #fff; }
+
+/* seções e cards */
+main { padding-bottom: 40px; }
+.cat { margin-top: 36px; border-top: 1px solid var(--line); padding-top: 26px; }
+.cat-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.cat-head h2 { display: flex; align-items: center; gap: 14px; margin: 0; font-family: var(--head); font-weight: 700; font-size: clamp(1.15rem, 2.6vw, 1.6rem); text-transform: uppercase; letter-spacing: .03em; text-wrap: balance; }
+.cat-ic { width: 34px; height: 34px; color: var(--pink); }
+.count { margin-left: auto; color: var(--muted); white-space: nowrap; padding-bottom: 6px; border-bottom: 2px solid var(--pink); }
+.count b { color: var(--fg); font-weight: 600; }
+.lista { display: grid; gap: 14px; }
+.card { display: grid; grid-template-columns: 236px minmax(0, 1fr) 240px; gap: 22px; align-items: center; padding: 14px; background: linear-gradient(180deg, var(--panel), var(--bg2)); border: 1px solid var(--line); border-radius: 16px; cursor: pointer; }
+.card:hover { border-color: var(--line2); }
+.foto { position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; display: grid; place-items: center; background: radial-gradient(70% 70% at 50% 55%, #2a2552, #120f26 70%); }
+.foto::after { content: ""; position: absolute; left: 12%; right: 12%; bottom: 10%; height: 14%; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--pink) 35%, transparent), transparent); }
+.foto img { position: relative; z-index: 1; max-width: 84%; max-height: 84%; object-fit: contain; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)); transition: transform .2s; }
+.card:hover .foto img { transform: scale(1.04); }
+.foto.amb img { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: cover; filter: none; }
+.num { position: absolute; z-index: 2; top: 8px; left: 8px; font-family: var(--head); font-weight: 700; font-size: 12px; letter-spacing: .04em; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--bg) 80%, transparent); color: var(--cyan); font-variant-numeric: tabular-nums; }
+.coracao { position: absolute; z-index: 2; top: 8px; right: 8px; display: none; color: var(--pink); }
+.card.salvo .coracao { display: block; }
+.info { min-width: 0; }
+.faixa { display: inline-flex; align-items: center; gap: 7px; font-family: var(--head); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; padding: 5px 12px; border-radius: 8px; border: 1.5px solid currentColor; }
+.faixa.bar { color: var(--cyan); } .faixa.cb { color: var(--amber); } .faixa.pr { color: var(--pink); }
+.card h3 { margin: 12px 0 0; font-family: var(--head); font-weight: 600; font-size: 20px; line-height: 1.25; text-wrap: balance; }
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { color: var(--pink2); }
+.specs { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 12px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
+.specs li { display: flex; align-items: center; gap: 6px; }
+.stats { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+.stats span { display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; border-left: 1px solid var(--line2); }
+.stats span:first-child { padding-left: 0; border-left: 0; }
+.nota { color: var(--fg); }
+.nota .ic { color: var(--amber); }
+.compra { align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding-left: 22px; border-left: 1px solid var(--line); }
+.preco { margin: 0; display: flex; flex-direction: column; }
+.apartir { color: var(--muted); font-size: 13px; }
+.valor { font-family: var(--head); font-weight: 700; font-size: 30px; line-height: 1.1; color: var(--pink); font-variant-numeric: tabular-nums; text-shadow: 0 0 18px color-mix(in srgb, var(--pink) 35%, transparent); }
+.valor small { font-size: .7em; }
+.data { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 16px; border-radius: 10px; background: linear-gradient(180deg, var(--pink2), var(--pink)); color: #fff; text-decoration: none; font-family: var(--head); font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: .03em; box-shadow: 0 6px 22px color-mix(in srgb, var(--pink) 40%, transparent); }
+.btn:hover { filter: brightness(1.1); }
+.det-link { display: inline-flex; align-items: center; justify-content: center; gap: 4px; margin-top: 6px; color: var(--muted); font-size: 14px; text-decoration: none; }
+.det-link:hover { color: var(--fg); }
+.vazio { margin: 36px 0; color: var(--muted); }
+
+/* detalhe do produto */
+.detalhe { padding-block: 20px 48px; }
+.voltar { display: inline-flex; align-items: center; gap: 10px; padding: 6px 0; background: none; border: 0; cursor: pointer; color: var(--pink); font-family: var(--head); font-weight: 700; font-size: 17px; }
+.voltar .ic { width: 22px; height: 22px; }
+.migalhas { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 14px 0 18px; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
+.migalhas li + li::before { content: "/"; margin-right: 10px; color: var(--line2); }
+.migalhas a { text-decoration: none; }
+.migalhas a:hover { color: var(--fg); }
+.migalhas [aria-current] { color: var(--violet); }
+.det-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 18px; align-items: stretch; }
+.palco { position: relative; min-height: 380px; border: 1px solid var(--line2); border-radius: 16px; overflow: hidden; display: grid; place-items: center; padding: 36px 24px 54px;
+  background: radial-gradient(60% 55% at 50% 45%, #2d2160, transparent 70%), linear-gradient(180deg, #120f26, #07060f); }
+.palco::before { content: ""; position: absolute; left: 0; right: 0; bottom: 20%; height: 2px; background: linear-gradient(90deg, transparent, var(--pink) 15%, var(--pink) 85%, transparent); box-shadow: 0 0 18px 2px var(--pink), 0 0 60px 8px color-mix(in srgb, var(--pink) 45%, transparent); }
+.palco::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 20%; background: linear-gradient(180deg, color-mix(in srgb, var(--pink) 14%, transparent), transparent); }
+.palco img { position: relative; z-index: 1; max-width: 88%; max-height: 330px; object-fit: contain; filter: drop-shadow(0 22px 30px rgba(0,0,0,.7)) drop-shadow(0 0 30px color-mix(in srgb, var(--pink) 18%, transparent)); }
+.palco.amb { padding: 0; }
+.palco.amb img { max-width: 100%; max-height: none; width: 100%; height: 100%; object-fit: cover; filter: none; }
+.palco.amb::before, .palco.amb::after { display: none; }
+.palco .num { top: 14px; left: 14px; font-size: 14px; padding: 4px 10px; }
+.caixa { padding: 22px; border: 1px solid var(--line2); border-radius: 16px; background: linear-gradient(180deg, var(--panel), var(--bg2)); }
+.det-info { display: flex; flex-direction: column; justify-content: center; }
+.det-info h1 { margin: 14px 0 0; font-family: var(--head); font-weight: 700; font-size: clamp(1.5rem, 3.2vw, 2.1rem); line-height: 1.2; text-wrap: balance; }
+.det-info .stats { font-size: 16px; margin-top: 14px; }
+.det-info .preco { margin-top: 18px; }
+.det-info .valor { font-size: clamp(2.2rem, 5vw, 3rem); }
+.det-info .data { margin: 6px 0 18px; font-size: 14px; }
+.acoes { display: grid; gap: 12px; }
+.acoes .btn { padding: 16px; font-size: 17px; }
+.salvar { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px; border-radius: 10px; border: 1.5px solid var(--violet); background: transparent; cursor: pointer; font-weight: 600; }
+.salvar .ic { color: var(--violet); }
+.salvar[aria-pressed="true"] { background: color-mix(in srgb, var(--violet) 18%, transparent); }
+.salvar:hover { background: color-mix(in srgb, var(--violet) 12%, transparent); }
+.sobre-prod { margin-top: 18px; }
+.sobre-prod h2, .outros h2 { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; font-family: var(--head); font-weight: 700; font-size: 22px; }
+.sobre-prod h2 .ic { width: 34px; height: 34px; padding: 5px; border: 1.5px solid var(--pink); border-radius: 8px; color: var(--pink); }
+.chamada { margin: 0 0 12px; font-size: 20px; line-height: 1.4; color: var(--fg); font-weight: 600; max-width: 62ch; }
+.sobre-prod p { max-width: 70ch; color: #c9c6e6; font-size: 17px; }
+.sobre-prod p b { color: var(--fg); }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 18px 0; padding: 0; list-style: none; }
+.tiles li { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--line2); border-radius: 12px; background: var(--bg2); min-width: 0; }
+.tiles .ic { width: 28px; height: 28px; color: var(--cyan); }
+.tiles span { min-width: 0; overflow-wrap: anywhere; }
+.avisos { display: grid; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+.avisos li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border: 1px solid var(--line2); border-radius: 12px; background: color-mix(in srgb, var(--violet) 8%, var(--bg2)); color: #c3b9ff; font-size: 15px; }
+.avisos .ic { color: var(--violet); margin-top: 1px; }
+.outros { margin-top: 30px; }
+.mini-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.mini { display: grid; gap: 8px; align-content: start; padding: 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); text-decoration: none; cursor: pointer; }
+.mini:hover { border-color: var(--line2); }
+.mini strong { font-family: var(--head); font-weight: 600; font-size: 15px; line-height: 1.25; }
+.mini .mv { color: var(--pink); font-family: var(--head); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* sobre e rodapé */
+.sobre { margin-top: 44px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.sobre h2 { margin: 0 0 12px; font-family: var(--head); font-size: 22px; text-transform: uppercase; letter-spacing: .03em; }
+.sobre ul { margin: 0; padding-left: 20px; color: #cfcce9; display: grid; gap: 8px; max-width: 75ch; }
+.sobre b { color: var(--fg); }
+.rodape { margin-top: 36px; border-top: 1px solid var(--line); background: var(--bg2); }
+.rodape .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; padding-block: 22px; }
+.rodape .logo { font-size: 18px; }
+.rodape .logo .ic { width: 32px; height: 32px; }
+.rodape .lema { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; padding-left: 28px; border-left: 1px solid var(--line2); }
+.rodape .lema .ic { color: var(--pink); }
+.rodape .topo { margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; text-decoration: none; }
+.rodape .nota-legal { flex-basis: 100%; margin: 0; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .guia { margin-left: auto; }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .art { width: min(560px, 100%); justify-self: center; }
+  .card { grid-template-columns: 180px minmax(0, 1fr); }
+  .compra { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; padding: 12px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+  .compra .preco { margin-right: auto; }
+  .compra .data { order: 3; flex-basis: 100%; margin: 0; }
+  .compra .det-link { order: 4; margin: 0; }
+  .btn { flex: 0 1 260px; }
+  .det-grid { grid-template-columns: 1fr; }
+  .palco { min-height: 300px; }
+  .mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .top .wrap { gap: 12px; min-height: 62px; }
+  .logo { font-size: 17px; gap: 8px; }
+  .logo .ic { width: 30px; height: 30px; }
+  .guia { padding: 8px 12px; font-size: 12px; }
+  .guia .g2 { display: none; }
+  .hero .wrap { padding-block: 28px 26px; }
+  .hero .lead { font-size: 16px; }
+  .filtros { grid-template-columns: 1fr; }
+  .campo select { min-width: 0; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+  .card { grid-template-columns: 112px minmax(0, 1fr); gap: 14px; padding: 12px; }
+  .card h3 { font-size: 17px; margin-top: 8px; }
+  .specs { font-size: 13px; gap: 4px 12px; }
+  .stats { font-size: 13px; }
+  .stats span { padding: 0 10px; }
+  .compra { gap: 10px; }
+  .valor { font-size: 24px; }
+  .btn { flex: 1 1 100%; }
+  .compra .det-link { flex-basis: 100%; }
+  .palco { min-height: 260px; padding: 26px 14px 46px; }
+  .palco img { max-height: 230px; }
+  .caixa { padding: 18px; }
+  .chamada { font-size: 18px; }
+  .sobre-prod p { font-size: 16px; }
+  .tiles { grid-template-columns: 1fr; }
+  .rodape .lema { padding-left: 0; border-left: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .card, .chip, .btn, .mini { transition: border-color .15s, background .15s, filter .15s, box-shadow .15s; }
+}
+@media (prefers-reduced-motion: reduce) { .foto img { transition: none; } }
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="6"/><path d="M6 12h4M8 10v4"/><path d="M15 11h.01M18 13h.01"/></symbol><symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol><symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol><symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-5M12 8h.01"/></symbol><symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><path d="M7 7h.01"/></symbol><symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l4 4 5-7 5 7 4-4-2 11H5z"/><path d="M5 21h14"/></symbol><symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol><symbol id="i-sort" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M6 12h12M10 18h4"/></symbol><symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></symbol><symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 15 6-6 6 6"/></symbol><symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol><symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></symbol><symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5L22 7H6"/></symbol><symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol><symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol><symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7M21 3l-9 9"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></symbol><symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol><symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></symbol><symbol id="i-heartf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></symbol><symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol><symbol id="i-gpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="11" rx="2"/><circle cx="8" cy="11.5" r="2.6"/><circle cx="16" cy="11.5" r="2.6"/><path d="M5 17v3M9 17v2"/></symbol><symbol id="i-ram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="9" rx="1"/><path d="M6 10v3M10 10v3M14 10v3M18 10v3M5 16v3M19 16v3"/></symbol><symbol id="i-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><circle cx="12" cy="14" r="3"/><path d="M9 6h6"/></symbol><symbol id="i-fan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4c-.6-3 .6-5.4 3-5.4 1.8 0 2.4 2 .6 3.4M13.6 12c3-.6 5.4.6 5.4 3 0 1.8-2 2.4-3.4.6M12 13.6c.6 3-.6 5.4-3 5.4-1.8 0-2.4-2-.6-3.4M10.4 12c-3 .6-5.4-.6-5.4-3 0-1.8 2-2.4 3.4-.6"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></symbol><symbol id="i-keyboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M9 14h6"/></symbol><symbol id="i-mouse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 6v4"/></symbol><symbol id="i-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></symbol><symbol id="i-chair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v9H8z"/><path d="M5 12h14v3H5zM12 15v4M7 21l5-2 5 2"/></symbol></svg>
+<header class="top" id="topo">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg><span>PRODUTOS <b>DOS VÍDEOS</b></span></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#inicio" class="on"><svg class="ic sm" aria-hidden="true"><use href="#i-home"/></svg>Início</a>
+      <a href="#achados"><svg class="ic sm" aria-hidden="true"><use href="#i-grid"/></svg>Categorias</a>
+      <a href="#sobre"><svg class="ic sm" aria-hidden="true"><use href="#i-info"/></svg>Sobre</a>
+    </nav>
+    <a class="guia" href="#sobre"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Guia<span class="g2"> de ofertas</span></a>
+  </div>
+</header>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Bem-vindo aos</p>
+      <h1>Produtos <span>dos vídeos</span></h1>
+      <p class="lead">Os achados gamer da Shopee que aparecem nos meus vídeos, do baratinho ao premium. Tudo em um só lugar.</p>
+      <ul class="nums"><li><svg class="ic" aria-hidden="true"><use href="#i-tag"/></svg>50 achados</li><li><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>10 categorias</li></ul>
+    </div>
+    <div class="art"><img class="h-mon" src="img/25.webp" alt="" aria-hidden="true"><img class="h-case" src="img/15.webp" alt="" aria-hidden="true"><img class="h-kb" src="img/27.webp" alt="" aria-hidden="true"><img class="h-hs" src="img/37.webp" alt="" aria-hidden="true"><img class="h-ms" src="img/33.webp" alt="" aria-hidden="true"></div>
+  </div>
+</section>
+<main class="wrap" id="achados">
+  <a class="publi" href="#sobre"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><p><strong>#publi · Links de afiliado.</strong> Se você comprar por eles, eu ganho uma comissão e você não paga nada a mais. Preços e notas de 28/10/2026, podem mudar.</p><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <div class="filtros">
+    <label class="campo" for="busca"><span style="position:absolute;left:-9999px">Buscar produto</span><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input id="busca" type="search" placeholder="Buscar: monitor, RTX, cadeira, nº do vídeo…" autocomplete="off"></label>
+    <label class="campo" for="ordem"><span style="position:absolute;left:-9999px">Ordenar</span><svg class="ic" aria-hidden="true"><use href="#i-sort"/></svg><select id="ordem">
+      <option value="n">Nº do vídeo</option>
+      <option value="vendas">Mais vendidos</option>
+      <option value="menor">Menor preço</option>
+      <option value="maior">Maior preço</option>
+      <option value="nota">Melhor nota</option>
+    </select><svg class="ic dd" aria-hidden="true"><use href="#i-down"/></svg></label>
+  </div>
+  <div class="chips" role="group" aria-label="Categorias"><button type="button" class="chip on" data-cat="todas" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>Todas</button><button type="button" class="chip" data-cat="placas" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-gpu"/></svg>Placas e CPUs</button><button type="button" class="chip" data-cat="memoria" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-ram"/></svg>RAM e SSD</button><button type="button" class="chip" data-cat="montagem" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-case"/></svg>Montagem</button><button type="button" class="chip" data-cat="coolers" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-fan"/></svg>Coolers</button><button type="button" class="chip" data-cat="monitores" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-monitor"/></svg>Monitores</button><button type="button" class="chip" data-cat="teclados" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"/></svg>Teclados</button><button type="button" class="chip" data-cat="mouses" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-mouse"/></svg>Mouses</button><button type="button" class="chip" data-cat="audio" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-headphones"/></svg>Áudio</button><button type="button" class="chip" data-cat="cadeiras" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-chair"/></svg>Cadeiras</button><button type="button" class="chip" data-cat="acessorios" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg>Acessórios</button><button type="button" class="chip" data-cat="salvos" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg>Salvos <b class="nsalvos">0</b></button></div>
+  <section class="cat" id="placas" data-cat="placas">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-gpu"/></svg>Placas de vídeo e processadores</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="1" data-cat="placas" data-preco="939.99" data-nota="4.92" data-vendas="744" data-busca="placa de vídeo aitek rx 580 8gb (recondicionada) placa de vídeo aitek rx 580 2048sp 8gb gddr5 256 bits pcie 3.0 recondicionada 8 pinos placas de vídeo e processadores 8gb gddr5 256 bits pcie 3.0">
+  <a class="foto" href="#p01" data-abrir="1" aria-label="Ver detalhes: Placa de Vídeo AITEK RX 580 8GB (recondicionada)"><span class="num">Nº 01</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/01.webp" alt="Placa de Vídeo AITEK RX 580 8GB (recondicionada)" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p01" data-abrir="1">Placa de Vídeo AITEK RX 580 8GB (recondicionada)</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>8GB GDDR5</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>256 bits</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>PCIe 3.0</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,92</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>744 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 939,99</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/1BWKFZQZZ" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p01" data-abrir="1">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="2" data-cat="placas" data-preco="2216.79" data-nota="4.94" data-vendas="277" data-busca="placa de vídeo xfx radeon rx 7600 8gb placa de video xfx radeon rx 7600 speedster swft210, 8gb, gddr6, 128-bit placas de vídeo e processadores 8gb gddr6 128 bits rdna 3">
+  <a class="foto" href="#p02" data-abrir="2" aria-label="Ver detalhes: Placa de Vídeo XFX Radeon RX 7600 8GB"><span class="num">Nº 02</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/02.webp" alt="Placa de Vídeo XFX Radeon RX 7600 8GB" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p02" data-abrir="2">Placa de Vídeo XFX Radeon RX 7600 8GB</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>8GB GDDR6</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>128 bits</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RDNA 3</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,94</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>277 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 2.216,79</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/W7mvAXWYg" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p02" data-abrir="2">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="3" data-cat="placas" data-preco="3208.99" data-nota="4.95" data-vendas="3000" data-busca="placa de vídeo msi rtx 5060 8gb shadow 2x oc placa de vídeo nvidia geforce msi rtx5060 8gb gddr7 128bits shadow 2x oc placas de vídeo e processadores 8gb gddr7 128 bits série rtx 50">
+  <a class="foto" href="#p03" data-abrir="3" aria-label="Ver detalhes: Placa de Vídeo MSI RTX 5060 8GB Shadow 2X OC"><span class="num">Nº 03</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/03.webp" alt="Placa de Vídeo MSI RTX 5060 8GB Shadow 2X OC" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p03" data-abrir="3">Placa de Vídeo MSI RTX 5060 8GB Shadow 2X OC</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>8GB GDDR7</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>128 bits</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Série RTX 50</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>3 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 3.208,99</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/LoMirY9tf" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p03" data-abrir="3">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="4" data-cat="placas" data-preco="629.00" data-nota="4.96" data-vendas="6000" data-busca="processador amd ryzen 5 5500 processador amd ryzen 5 5500, 3.6ghz, cache 16mb, hexa core, 12 threads, am4 placas de vídeo e processadores 6 núcleos 12 threads soquete am4">
+  <a class="foto" href="#p04" data-abrir="4" aria-label="Ver detalhes: Processador AMD Ryzen 5 5500"><span class="num">Nº 04</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/04.webp" alt="Processador AMD Ryzen 5 5500" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p04" data-abrir="4">Processador AMD Ryzen 5 5500</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>6 núcleos</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>12 threads</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Soquete AM4</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,96</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>6 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 629,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/AAIIQvwiwa" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p04" data-abrir="4">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="5" data-cat="placas" data-preco="1028.90" data-nota="4.95" data-vendas="1000" data-busca="processador amd ryzen 7 5700 processador amd ryzen 7 5700, 3.7 ghz (4.6ghz max turbo), 8 núcleos, 16 threads placas de vídeo e processadores 8 núcleos 16 threads até 4,6 ghz">
+  <a class="foto" href="#p05" data-abrir="5" aria-label="Ver detalhes: Processador AMD Ryzen 7 5700"><span class="num">Nº 05</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/05.webp" alt="Processador AMD Ryzen 7 5700" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p05" data-abrir="5">Processador AMD Ryzen 7 5700</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>8 núcleos</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>16 threads</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Até 4,6 GHz</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>1 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 1.028,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/9zysEcxMHZ" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p05" data-abrir="5">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="memoria" data-cat="memoria">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-ram"/></svg>Memória RAM e SSD</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="6" data-cat="memoria" data-preco="465.49" data-nota="5.0" data-vendas="60" data-busca="memória kingston fury beast 8gb ddr4 3200mhz memória ddr4 kingston fury beast 8gb 3200mhz kf432c16bb/8 nova lacrada memória ram e ssd 8gb ddr4 3200 mhz cl16">
+  <a class="foto" href="#p06" data-abrir="6" aria-label="Ver detalhes: Memória Kingston Fury Beast 8GB DDR4 3200MHz"><span class="num">Nº 06</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/06.webp" alt="Memória Kingston Fury Beast 8GB DDR4 3200MHz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p06" data-abrir="6">Memória Kingston Fury Beast 8GB DDR4 3200MHz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>8GB DDR4</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>3200 MHz</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>CL16</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>5,0</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>60 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 465,49</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/9APlF7Txk6" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p06" data-abrir="6">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="7" data-cat="memoria" data-preco="151.00" data-nota="4.83" data-vendas="2000" data-busca="memória kingston hyperx fury ddr3/ddr4 kingston hyperx fury ddr3 ddr4 4gb 8gb 16gb 1333 1600 1866 2400 2666mhz memória dimm memória ram e ssd ddr3 ou ddr4 4 a 16 gb desktop">
+  <a class="foto" href="#p07" data-abrir="7" aria-label="Ver detalhes: Memória Kingston HyperX Fury DDR3/DDR4"><span class="num">Nº 07</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/07.webp" alt="Memória Kingston HyperX Fury DDR3/DDR4" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p07" data-abrir="7">Memória Kingston HyperX Fury DDR3/DDR4</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>DDR3 ou DDR4</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>4 a 16 GB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Desktop</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,83</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>2 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 151</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/906L2oUb55" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p07" data-abrir="7">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="8" data-cat="memoria" data-preco="159.99" data-nota="4.94" data-vendas="499" data-busca="ssd madfox sata 2.5&quot; (120/240/480gb) hd ssd sata 3 madfox 120gb - 240gb - 480gb - 2.5 - notebook e pc memória ram e ssd sata 3 2,5&quot; 120 a 480 gb">
+  <a class="foto" href="#p08" data-abrir="8" aria-label="Ver detalhes: SSD MADFOX SATA 2.5&quot; (120/240/480GB)"><span class="num">Nº 08</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/08.webp" alt="SSD MADFOX SATA 2.5&quot; (120/240/480GB)" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p08" data-abrir="8">SSD MADFOX SATA 2.5&quot; (120/240/480GB)</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>SATA 3</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>2,5&quot;</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>120 a 480 GB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,94</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>499 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 159,99</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/2LZR6Ytybo" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p08" data-abrir="8">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="9" data-cat="memoria" data-preco="361.62" data-nota="4.88" data-vendas="137" data-busca="ssd adata su650 sata 2.5&quot; ssd adata 240gb/ 256gb/ 480gb/ 960gb/ 1tb su650 2.5&quot; sata 6gb/s asu650ss memória ram e ssd sata 6 gb/s 2,5&quot; 240 gb a 1 tb">
+  <a class="foto" href="#p09" data-abrir="9" aria-label="Ver detalhes: SSD Adata SU650 SATA 2.5&quot;"><span class="num">Nº 09</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/09.webp" alt="SSD Adata SU650 SATA 2.5&quot;" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p09" data-abrir="9">SSD Adata SU650 SATA 2.5&quot;</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>SATA 6 Gb/s</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>2,5&quot;</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>240 GB a 1 TB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,88</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>137 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 361,62</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/2VsrIrtLGr" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p09" data-abrir="9">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="10" data-cat="memoria" data-preco="839.00" data-nota="4.97" data-vendas="787" data-busca="ssd kingston nv3 nvme pcie 4.0 ssd nvme m.2 kingston 4tb/ 2tb/ 1tb e 500gb nvme pcie 4.0 - snv3s preto memória ram e ssd nvme m.2 pcie 4.0 500 gb a 4 tb">
+  <a class="foto" href="#p10" data-abrir="10" aria-label="Ver detalhes: SSD Kingston NV3 NVMe PCIe 4.0"><span class="num">Nº 10</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/10.webp" alt="SSD Kingston NV3 NVMe PCIe 4.0" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p10" data-abrir="10">SSD Kingston NV3 NVMe PCIe 4.0</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>NVMe M.2</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>PCIe 4.0</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>500 GB a 4 TB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,97</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>787 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 839</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/20wahwvFHm" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p10" data-abrir="10">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="montagem" data-cat="montagem">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-case"/></svg>Placas-mãe, fontes e gabinetes</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="11" data-cat="montagem" data-preco="809.00" data-nota="4.93" data-vendas="6000" data-busca="placa-mãe asus tuf gaming b550m-plus placa-mãe amd am4 asus tuf gaming b550m-plus - 90mb14a0-c1bay0 placas-mãe, fontes e gabinetes chipset b550 soquete am4 micro-atx">
+  <a class="foto" href="#p11" data-abrir="11" aria-label="Ver detalhes: Placa-Mãe Asus TUF Gaming B550M-Plus"><span class="num">Nº 11</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/11.webp" alt="Placa-Mãe Asus TUF Gaming B550M-Plus" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p11" data-abrir="11">Placa-Mãe Asus TUF Gaming B550M-Plus</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Chipset B550</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Soquete AM4</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Micro-ATX</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,93</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>6 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 809,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/3LRyIQLWgr" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p11" data-abrir="11">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="12" data-cat="montagem" data-preco="319.00" data-nota="4.96" data-vendas="4000" data-busca="fonte msi mag 650w 80 plus bronze fonte atx msi 650w mag 2.4 pcie 80 plus bronze 306-7zpax39-hh9 placas-mãe, fontes e gabinetes 650 w 80 plus bronze atx">
+  <a class="foto" href="#p12" data-abrir="12" aria-label="Ver detalhes: Fonte MSI MAG 650W 80 Plus Bronze"><span class="num">Nº 12</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/12.webp" alt="Fonte MSI MAG 650W 80 Plus Bronze" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p12" data-abrir="12">Fonte MSI MAG 650W 80 Plus Bronze</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>650 W</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>80 Plus Bronze</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ATX</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,96</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>4 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 319,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/3qOEtLJcfy" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p12" data-abrir="12">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="13" data-cat="montagem" data-preco="350.90" data-nota="4.98" data-vendas="964" data-busca="fonte cooler master mwe gold 650 v3 fonte cooler master atx 3.1 650w mwe gold 650 v3 pfc ativo 80 plus gold placas-mãe, fontes e gabinetes 650 w 80 plus gold atx 3.1">
+  <a class="foto" href="#p13" data-abrir="13" aria-label="Ver detalhes: Fonte Cooler Master MWE Gold 650 V3"><span class="num">Nº 13</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/13.webp" alt="Fonte Cooler Master MWE Gold 650 V3" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p13" data-abrir="13">Fonte Cooler Master MWE Gold 650 V3</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>650 W</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>80 Plus Gold</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ATX 3.1</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,98</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>964 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 350,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/3g4oh2KG0x" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p13" data-abrir="13">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="14" data-cat="montagem" data-preco="126.47" data-nota="4.94" data-vendas="4000" data-busca="gabinete pichau atom x gabinete gamer aquário pichau atom x, mini-tower, lateral de vidro, com 2 fans placas-mãe, fontes e gabinetes mini-tower lateral de vidro 2 fans">
+  <a class="foto" href="#p14" data-abrir="14" aria-label="Ver detalhes: Gabinete Pichau Atom X"><span class="num">Nº 14</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/14.webp" alt="Gabinete Pichau Atom X" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p14" data-abrir="14">Gabinete Pichau Atom X</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Mini-Tower</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Lateral de vidro</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>2 fans</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,94</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>4 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 126,47</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/2qVhhVNQho" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p14" data-abrir="14">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="15" data-cat="montagem" data-preco="247.33" data-nota="4.95" data-vendas="4000" data-busca="gabinete mancer cv700l gabinete gamer aquário mancer cv700l, mid tower, lateral de vidro, preto placas-mãe, fontes e gabinetes mid tower lateral de vidro estilo aquário">
+  <a class="foto" href="#p15" data-abrir="15" aria-label="Ver detalhes: Gabinete Mancer CV700L"><span class="num">Nº 15</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/15.webp" alt="Gabinete Mancer CV700L" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p15" data-abrir="15">Gabinete Mancer CV700L</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Mid Tower</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Lateral de vidro</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Estilo aquário</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>4 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 247,33</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/2gCHVCO42n" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p15" data-abrir="15">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="coolers" data-cat="coolers">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-fan"/></svg>Coolers e water coolers</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="16" data-cat="coolers" data-preco="178.81" data-nota="4.95" data-vendas="7000" data-busca="water cooler tgt spartel v2 240mm water cooler tgt spartel v2, rainbow, 240mm, preto, tgt-splv240-bk01 coolers e water coolers 240 mm rainbow water cooler">
+  <a class="foto" href="#p16" data-abrir="16" aria-label="Ver detalhes: Water Cooler TGT Spartel V2 240mm"><span class="num">Nº 16</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/16.webp" alt="Water Cooler TGT Spartel V2 240mm" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p16" data-abrir="16">Water Cooler TGT Spartel V2 240mm</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>240 mm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Rainbow</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Water cooler</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>7 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 178,81</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4qGm5DJPH0" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p16" data-abrir="16">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="17" data-cat="coolers" data-preco="276.03" data-nota="4.95" data-vendas="1000" data-busca="water cooler pichau aqua 240x argb water cooler pichau aqua 240x, argb, 240mm, preto, pch-aqa240x-bk01 coolers e water coolers 240 mm argb water cooler">
+  <a class="foto" href="#p17" data-abrir="17" aria-label="Ver detalhes: Water Cooler Pichau Aqua 240X ARGB"><span class="num">Nº 17</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/17.webp" alt="Water Cooler Pichau Aqua 240X ARGB" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p17" data-abrir="17">Water Cooler Pichau Aqua 240X ARGB</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>240 mm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ARGB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Water cooler</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>1 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 276,03</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4fxLsuK2bz" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p17" data-abrir="17">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="18" data-cat="coolers" data-preco="326.90" data-nota="4.94" data-vendas="397" data-busca="water cooler mancer mystic g1 240mm branco water cooler mancer mystic g1, argb, 240mm, branco, mcr-mtc240-wh01 coolers e water coolers 240 mm argb branco">
+  <a class="foto" href="#p18" data-abrir="18" aria-label="Ver detalhes: Water Cooler Mancer Mystic G1 240mm Branco"><span class="num">Nº 18</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/18.webp" alt="Water Cooler Mancer Mystic G1 240mm Branco" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p18" data-abrir="18">Water Cooler Mancer Mystic G1 240mm Branco</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>240 mm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ARGB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Branco</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,94</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>397 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 326,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4VdvgbKfwy" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p18" data-abrir="18">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="19" data-cat="coolers" data-preco="55.75" data-nota="4.86" data-vendas="401" data-busca="air cooler knup g-vr342 air cooler fan processador duplo pc cpu intel amd knup g-vr342 coolers e water coolers intel e amd fan duplo air cooler">
+  <a class="foto" href="#p19" data-abrir="19" aria-label="Ver detalhes: Air Cooler Knup G-VR342"><span class="num">Nº 19</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/19.webp" alt="Air Cooler Knup G-VR342" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p19" data-abrir="19">Air Cooler Knup G-VR342</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Intel e AMD</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Fan duplo</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Air cooler</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,86</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>401 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 55,75</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4LKVUILJHx" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p19" data-abrir="19">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="20" data-cat="coolers" data-preco="99.00" data-nota="4.92" data-vendas="1000" data-busca="air cooler duplo rgb universal air cooler processador duplo pc cpu rgb intel amd universal coolers e water coolers intel e amd rgb air cooler">
+  <a class="foto" href="#p20" data-abrir="20" aria-label="Ver detalhes: Air Cooler Duplo RGB universal"><span class="num">Nº 20</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/20.webp" alt="Air Cooler Duplo RGB universal" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p20" data-abrir="20">Air Cooler Duplo RGB universal</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Intel e AMD</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Air cooler</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,92</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>1 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 99,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4B15HzLwcw" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p20" data-abrir="20">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="monitores" data-cat="monitores">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-monitor"/></svg>Monitores</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="21" data-cat="monitores" data-preco="407.86" data-nota="4.86" data-vendas="6000" data-busca="monitor mancer horizon z3b 21.5&quot; 100hz monitor gamer mancer horizon z3b, 21.5 pol, va, fhd, 1ms, 100hz, hdmi/vga monitores 21,5&quot; 100 hz va full hd">
+  <a class="foto" href="#p21" data-abrir="21" aria-label="Ver detalhes: Monitor Mancer Horizon Z3B 21.5&quot; 100Hz"><span class="num">Nº 21</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/21.webp" alt="Monitor Mancer Horizon Z3B 21.5&quot; 100Hz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p21" data-abrir="21">Monitor Mancer Horizon Z3B 21.5&quot; 100Hz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>21,5&quot;</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>100 Hz</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>VA Full HD</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,86</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>6 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 407,86</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/BUwWevjfc" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p21" data-abrir="21">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="22" data-cat="monitores" data-preco="591.90" data-nota="4.92" data-vendas="718" data-busca="monitor tgt altay ts6 23.8&quot; 180hz monitor gamer tgt altay ts6, 23.8 pol, ips, fhd, 1ms, 180hz, hdmi/vga monitores 23,8&quot; 180 hz ips full hd">
+  <a class="foto" href="#p22" data-abrir="22" aria-label="Ver detalhes: Monitor TGT Altay TS6 23.8&quot; 180Hz"><span class="num">Nº 22</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/22.webp" alt="Monitor TGT Altay TS6 23.8&quot; 180Hz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p22" data-abrir="22">Monitor TGT Altay TS6 23.8&quot; 180Hz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>23,8&quot;</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>180 Hz</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>IPS Full HD</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,92</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>718 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 591,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/1BWKLwN0b" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p22" data-abrir="22">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="23" data-cat="monitores" data-preco="729.00" data-nota="4.94" data-vendas="3000" data-busca="monitor curvo concórdia cz270f 27&quot; 100hz monitor gamer curvo 27&#x27;&#x27; cz270f concórdia 100hz led full hd hdmi vga srgb 99% monitores 27&quot; curvo 100 hz full hd">
+  <a class="foto" href="#p23" data-abrir="23" aria-label="Ver detalhes: Monitor Curvo Concórdia CZ270F 27&quot; 100Hz"><span class="num">Nº 23</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/23.webp" alt="Monitor Curvo Concórdia CZ270F 27&quot; 100Hz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p23" data-abrir="23">Monitor Curvo Concórdia CZ270F 27&quot; 100Hz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>27&quot; curvo</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>100 Hz</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Full HD</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,94</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>3 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 729,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/W7mvGuSzi" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p23" data-abrir="23">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="24" data-cat="monitores" data-preco="834.86" data-nota="4.92" data-vendas="560" data-busca="monitor lg ultragear 24gs60f 24&quot; 180hz monitor lg 24&quot; gamer 180hz 1ms ultragear 24gs60f-b monitores 24&quot; 180 hz 1 ms">
+  <a class="foto" href="#p24" data-abrir="24" aria-label="Ver detalhes: Monitor LG UltraGear 24GS60F 24&quot; 180Hz"><span class="num">Nº 24</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/24.webp" alt="Monitor LG UltraGear 24GS60F 24&quot; 180Hz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p24" data-abrir="24">Monitor LG UltraGear 24GS60F 24&quot; 180Hz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>24&quot;</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>180 Hz</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>1 ms</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,92</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>560 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 834,86</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/LoMixv6Kh" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p24" data-abrir="24">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="25" data-cat="monitores" data-preco="1299.00" data-nota="4.90" data-vendas="2000" data-busca="monitor samsung odyssey g5 32&quot; qhd 165hz monitor gamer samsung odyssey g5 32&#x27;&#x27;, qhd, 165hz, 1ms, freesync, hdmi, dp monitores 32&quot; qhd 165 hz">
+  <a class="foto" href="#p25" data-abrir="25" aria-label="Ver detalhes: Monitor Samsung Odyssey G5 32&quot; QHD 165Hz"><span class="num">Nº 25</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/25.webp" alt="Monitor Samsung Odyssey G5 32&quot; QHD 165Hz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p25" data-abrir="25">Monitor Samsung Odyssey G5 32&quot; QHD 165Hz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>32&quot;</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>QHD</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>165 Hz</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,90</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>2 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 1.299,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/qkdJstCJo" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p25" data-abrir="25">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="teclados" data-cat="teclados">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-keyboard"/></svg>Teclados</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="26" data-cat="teclados" data-preco="38.88" data-nota="4.84" data-vendas="7000" data-busca="teclado gamer semi-mecânico rgb teclado gamer semi-mecânico rgb anti-ghosting teclados semi-mecânico rgb anti-ghosting">
+  <a class="foto" href="#p26" data-abrir="26" aria-label="Ver detalhes: Teclado Gamer Semi-mecânico RGB"><span class="num">Nº 26</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/26.webp" alt="Teclado Gamer Semi-mecânico RGB" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p26" data-abrir="26">Teclado Gamer Semi-mecânico RGB</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Semi-mecânico</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Anti-ghosting</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,84</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>7 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 38,88</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/8KqeFgisC3" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p26" data-abrir="26">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="27" data-cat="teclados" data-preco="99.99" data-nota="4.94" data-vendas="10000" data-busca="teclado mecânico tgt sherman compacto teclado mecanico gamer tgt sherman compacto, rainbow, abnt2, switch azul teclados switch azul abnt2 compacto">
+  <a class="foto" href="#p27" data-abrir="27" aria-label="Ver detalhes: Teclado Mecânico TGT Sherman Compacto"><span class="num">Nº 27</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/27.webp" alt="Teclado Mecânico TGT Sherman Compacto" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p27" data-abrir="27">Teclado Mecânico TGT Sherman Compacto</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Switch azul</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ABNT2</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Compacto</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,94</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>10 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 99,99</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/8pmuqbgyBA" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p27" data-abrir="27">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="28" data-cat="teclados" data-preco="144.80" data-nota="4.95" data-vendas="2000" data-busca="teclado mecânico titorion 60% hot swap teclado mecânico gamer titorion 60% teclado preto computador abnt2 hot swap rgb teclados 60% hot swap abnt2">
+  <a class="foto" href="#p28" data-abrir="28" aria-label="Ver detalhes: Teclado Mecânico Titorion 60% Hot Swap"><span class="num">Nº 28</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/28.webp" alt="Teclado Mecânico Titorion 60% Hot Swap" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p28" data-abrir="28">Teclado Mecânico Titorion 60% Hot Swap</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>60%</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Hot swap</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ABNT2</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>2 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 144,80</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/8fTUeIhbW9" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p28" data-abrir="28">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="29" data-cat="teclados" data-preco="198.90" data-nota="4.97" data-vendas="460" data-busca="teclado mecânico redragon lakshmi 60% teclado mecanico redragon lakshmi, rainbow, abnt2, layout 60%, switch marrom, k606r-p teclados 60% switch marrom abnt2">
+  <a class="foto" href="#p29" data-abrir="29" aria-label="Ver detalhes: Teclado Mecânico Redragon Lakshmi 60%"><span class="num">Nº 29</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/29.webp" alt="Teclado Mecânico Redragon Lakshmi 60%" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p29" data-abrir="29">Teclado Mecânico Redragon Lakshmi 60%</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>60%</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Switch marrom</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>ABNT2</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,97</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>460 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 198,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/9APlFDfhVG" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p29" data-abrir="29">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="30" data-cat="teclados" data-preco="248.90" data-nota="4.97" data-vendas="68" data-busca="teclado magnético redragon fizz teclado magnetico gamer redragon fizz, rgb, 60%, usb, switch ambermag linear teclados 60% switch magnético rgb">
+  <a class="foto" href="#p30" data-abrir="30" aria-label="Ver detalhes: Teclado Magnético Redragon Fizz"><span class="num">Nº 30</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/30.webp" alt="Teclado Magnético Redragon Fizz" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p30" data-abrir="30">Teclado Magnético Redragon Fizz</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>60%</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Switch magnético</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,97</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>68 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 248,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/906L2ugKqF" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p30" data-abrir="30">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="mouses" data-cat="mouses">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-mouse"/></svg>Mouses e mousepads</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="31" data-cat="mouses" data-preco="22.88" data-nota="4.86" data-vendas="5000" data-busca="mouse gamer x7 3200 dpi mouse gamer para jogo computador 3200dpi com led laser x7 usb botões profissional mouses e mousepads 3200 dpi com fio led">
+  <a class="foto" href="#p31" data-abrir="31" aria-label="Ver detalhes: Mouse Gamer X7 3200 DPI"><span class="num">Nº 31</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/31.webp" alt="Mouse Gamer X7 3200 DPI" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p31" data-abrir="31">Mouse Gamer X7 3200 DPI</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>3200 DPI</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Com fio</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>LED</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,86</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>5 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 22,88</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/6VP04LEsoq" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p31" data-abrir="31">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="32" data-cat="mouses" data-preco="53.88" data-nota="4.85" data-vendas="2000" data-busca="mouse gamer sem fio 2.4ghz + bluetooth mouse gamer sem fio 2.4ghz + bluetooth 5.0 rgb recarregável mouses e mousepads sem fio bluetooth 5.0 recarregável">
+  <a class="foto" href="#p32" data-abrir="32" aria-label="Ver detalhes: Mouse Gamer Sem Fio 2.4GHz + Bluetooth"><span class="num">Nº 32</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/32.webp" alt="Mouse Gamer Sem Fio 2.4GHz + Bluetooth" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p32" data-abrir="32">Mouse Gamer Sem Fio 2.4GHz + Bluetooth</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Sem fio</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Bluetooth 5.0</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Recarregável</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,85</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>2 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 53,88</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/6L5Zs2FW9p" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p32" data-abrir="32">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="33" data-cat="mouses" data-preco="137.60" data-nota="4.93" data-vendas="208" data-busca="mouse redragon cobra m711 v2 mouse gamer redragon cobra rgb 12400dpi 8 botões m711 preto/branco - m711 v2 mouses e mousepads 12.400 dpi 8 botões rgb">
+  <a class="foto" href="#p33" data-abrir="33" aria-label="Ver detalhes: Mouse Redragon Cobra M711 V2"><span class="num">Nº 33</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/33.webp" alt="Mouse Redragon Cobra M711 V2" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p33" data-abrir="33">Mouse Redragon Cobra M711 V2</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>12.400 DPI</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>8 botões</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,93</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>208 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 137,60</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/6Am9fjG9Uo" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p33" data-abrir="33">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="34" data-cat="mouses" data-preco="69.89" data-nota="4.96" data-vendas="9000" data-busca="mousepad gamer apex control 49x42 mousepad gamer apex control mouse pad grande 49x42 mouses e mousepads 49 x 42 cm tamanho grande">
+  <a class="foto" href="#p34" data-abrir="34" aria-label="Ver detalhes: Mousepad Gamer APEX Control 49x42"><span class="num">Nº 34</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/34.webp" alt="Mousepad Gamer APEX Control 49x42" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p34" data-abrir="34">Mousepad Gamer APEX Control 49x42</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>49 x 42 cm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Tamanho grande</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,96</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>9 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 69,89</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/60SjTQGmpn" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p34" data-abrir="34">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="35" data-cat="mouses" data-preco="15.49" data-nota="4.87" data-vendas="7000" data-busca="mouse pad gamer traxen mouse pad gamer traxen 32x27cm / 60x30cm / 70x35cm estampas dragao chines + porta c mouses e mousepads até 70 x 35 cm 3 tamanhos estampa de dragão">
+  <a class="foto" href="#p35" data-abrir="35" aria-label="Ver detalhes: Mouse Pad Gamer Traxen"><span class="num">Nº 35</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/35.webp" alt="Mouse Pad Gamer Traxen" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p35" data-abrir="35">Mouse Pad Gamer Traxen</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Até 70 x 35 cm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>3 tamanhos</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Estampa de dragão</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,87</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>7 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 15,49</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/5q9JH7HQAm" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p35" data-abrir="35">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="audio" data-cat="audio">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-headphones"/></svg>Headsets e microfones</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="36" data-cat="audio" data-preco="54.61" data-nota="4.88" data-vendas="7000" data-busca="headset gamer tgt diver v2 headset gamer tgt diver v2, rainbow, drivers 40mm, preto headsets e microfones drivers 40 mm rainbow">
+  <a class="foto" href="#p36" data-abrir="36" aria-label="Ver detalhes: Headset Gamer TGT Diver V2"><span class="num">Nº 36</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/36.webp" alt="Headset Gamer TGT Diver V2" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p36" data-abrir="36">Headset Gamer TGT Diver V2</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Drivers 40 mm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Rainbow</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,88</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>7 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 54,61</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/qkdJwx0ru" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p36" data-abrir="36">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="37" data-cat="audio" data-preco="205.79" data-nota="4.93" data-vendas="1000" data-busca="headset redragon zeus lite headset gamer redragon zeus lite, com fio, drivers 53mm, preto, h510-lt headsets e microfones drivers 53 mm com fio">
+  <a class="foto" href="#p37" data-abrir="37" aria-label="Ver detalhes: Headset Redragon Zeus Lite"><span class="num">Nº 37</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/37.webp" alt="Headset Redragon Zeus Lite" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p37" data-abrir="37">Headset Redragon Zeus Lite</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Drivers 53 mm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Com fio</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,93</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>1 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 205,79</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/gRD7dxeCt" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p37" data-abrir="37">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="38" data-cat="audio" data-preco="319.90" data-nota="4.90" data-vendas="299" data-busca="headset redragon zeus pro sem fio headset gamer redragon zeus pro, sem fio, wireless 2.4, bluetooth, microfone destacável headsets e microfones sem fio 2.4 ghz bluetooth mic destacável">
+  <a class="foto" href="#p38" data-abrir="38" aria-label="Ver detalhes: Headset Redragon Zeus Pro Sem Fio"><span class="num">Nº 38</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/38.webp" alt="Headset Redragon Zeus Pro Sem Fio" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p38" data-abrir="38">Headset Redragon Zeus Pro Sem Fio</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Sem fio 2.4 GHz</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Bluetooth</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Mic destacável</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,90</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>299 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 319,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/1qdAVmtCq8" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p38" data-abrir="38">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="39" data-cat="audio" data-preco="87.50" data-nota="4.87" data-vendas="410" data-busca="microfone tgt anzer v2 usb microfone gamer tgt anzer v2, usb condensador cardioide rgb plug &amp; play headsets e microfones condensador usb rgb">
+  <a class="foto" href="#p39" data-abrir="39" aria-label="Ver detalhes: Microfone TGT Anzer V2 USB"><span class="num">Nº 39</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/39.webp" alt="Microfone TGT Anzer V2 USB" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p39" data-abrir="39">Microfone TGT Anzer V2 USB</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Condensador</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>USB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,87</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>410 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 87,50</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/1gJkJTtqB7" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p39" data-abrir="39">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="40" data-cat="audio" data-preco="134.99" data-nota="4.96" data-vendas="723" data-busca="microfone fifine sfm2 usb rgb microfone gamer condensador fifine superframe edition sfm2 usb rgb black headsets e microfones condensador usb rgb">
+  <a class="foto" href="#p40" data-abrir="40" aria-label="Ver detalhes: Microfone Fifine SFM2 USB RGB"><span class="num">Nº 40</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/40.webp" alt="Microfone Fifine SFM2 USB RGB" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p40" data-abrir="40">Microfone Fifine SFM2 USB RGB</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Condensador</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>USB</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,96</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>723 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 134,99</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/1W0K7AuTW6" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p40" data-abrir="40">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="cadeiras" data-cat="cadeiras">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-chair"/></svg>Cadeiras e mesas</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="41" data-cat="cadeiras" data-preco="220.00" data-nota="4.73" data-vendas="380" data-busca="cadeira gamer fortt harbin cadeira gamer fortt harbin verde - cgf022-vr cadeiras e mesas cor verde">
+  <a class="foto" href="#p41" data-abrir="41" aria-label="Ver detalhes: Cadeira Gamer Fortt Harbin"><span class="num">Nº 41</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/41.webp" alt="Cadeira Gamer Fortt Harbin" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p41" data-abrir="41">Cadeira Gamer Fortt Harbin</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Cor verde</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,73</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>380 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 220,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4LKVUP0svr" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p41" data-abrir="41">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="42" data-cat="cadeiras" data-preco="357.79" data-nota="4.90" data-vendas="519" data-busca="cadeira gamer fox racer nordic cadeira gamer fox racer nordic preta cadeiras e mesas cor preta">
+  <a class="foto" href="#p42" data-abrir="42" aria-label="Ver detalhes: Cadeira Gamer Fox Racer Nordic"><span class="num">Nº 42</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/42.webp" alt="Cadeira Gamer Fox Racer Nordic" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p42" data-abrir="42">Cadeira Gamer Fox Racer Nordic</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Cor preta</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,90</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>519 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 357,79</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4qGm5Jyyuy" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p42" data-abrir="42">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="43" data-cat="cadeiras" data-preco="499.00" data-nota="4.90" data-vendas="4000" data-busca="cadeira gamer reclinável com apoio de pés cadeira gamer ergonômica reclinável com apoio de pés ajustável e base giratória cadeiras e mesas reclinável apoio de pés giratória">
+  <a class="foto" href="#p43" data-abrir="43" aria-label="Ver detalhes: Cadeira Gamer Reclinável com Apoio de Pés"><span class="num">Nº 43</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/43.webp" alt="Cadeira Gamer Reclinável com Apoio de Pés" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa pr"><svg class="ic sm" aria-hidden="true"><use href="#i-crown"/></svg>Premium</span>
+    <h3><a href="#p43" data-abrir="43">Cadeira Gamer Reclinável com Apoio de Pés</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Reclinável</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Apoio de pés</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Giratória</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,90</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>4 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 499,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/4fxLt0zcFx" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p43" data-abrir="43">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="44" data-cat="cadeiras" data-preco="96.61" data-nota="4.80" data-vendas="2000" data-busca="escrivaninha gamer com nichos escrivaninha gamer p/ computador com nichos – ideal para quarto, estudo e escritório cadeiras e mesas com nichos">
+  <a class="foto" href="#p44" data-abrir="44" aria-label="Ver detalhes: Escrivaninha Gamer com Nichos"><span class="num">Nº 44</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/44.webp" alt="Escrivaninha Gamer com Nichos" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p44" data-abrir="44">Escrivaninha Gamer com Nichos</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Com nichos</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,80</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>2 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 96,61</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/5AtcTvxiF4" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p44" data-abrir="44">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="45" data-cat="cadeiras" data-preco="189.00" data-nota="4.79" data-vendas="1000" data-busca="mesa escrivaninha industrial 116cm mesa escrivaninha office estudo estilo industrial gamer computador 116cm cadeiras e mesas 116 cm estilo industrial">
+  <a class="foto" href="#p45" data-abrir="45" aria-label="Ver detalhes: Mesa Escrivaninha Industrial 116cm"><span class="num">Nº 45</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/45.webp" alt="Mesa Escrivaninha Industrial 116cm" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p45" data-abrir="45">Mesa Escrivaninha Industrial 116cm</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>116 cm</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Estilo industrial</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,79</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>1 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 189,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/50aCHcyLa3" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p45" data-abrir="45">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section><section class="cat" id="acessorios" data-cat="acessorios">
+  <header class="cat-head"><h2><svg class="ic cat-ic" aria-hidden="true"><use href="#i-gamepad"/></svg>Acessórios e setup</h2><span class="count"><b>5</b> produtos</span></header>
+  <div class="lista"><article class="card" data-n="46" data-cat="acessorios" data-preco="179.00" data-nota="4.96" data-vendas="7000" data-busca="controle gamesir t4 nova lite controle gamesir t4 nova lite sem fio para pc switch android ios celular steam acessórios e setup sem fio pc e switch android e ios">
+  <a class="foto" href="#p46" data-abrir="46" aria-label="Ver detalhes: Controle GameSir T4 Nova Lite"><span class="num">Nº 46</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/46.webp" alt="Controle GameSir T4 Nova Lite" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p46" data-abrir="46">Controle GameSir T4 Nova Lite</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Sem fio</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>PC e Switch</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Android e iOS</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,96</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>7 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-shield"/></svg>Loja oficial</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 179,00</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/9APlFJ7W1Y" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p46" data-abrir="46">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="47" data-cat="acessorios" data-preco="19.67" data-nota="4.89" data-vendas="20000" data-busca="fita de led rgb 5050 com bluetooth fita de led rgb 5050 com controle bluetooth, aplicativo, luz de fundo para tv acessórios e setup rgb 5050 bluetooth app">
+  <a class="foto amb" href="#p47" data-abrir="47" aria-label="Ver detalhes: Fita de LED RGB 5050 com Bluetooth"><span class="num">Nº 47</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/47.webp" alt="Fita de LED RGB 5050 com Bluetooth" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p47" data-abrir="47">Fita de LED RGB 5050 com Bluetooth</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>RGB 5050</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Bluetooth</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>App</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,89</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>20 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 19,67</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/906L3089MX" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p47" data-abrir="47">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="48" data-cat="acessorios" data-preco="29.99" data-nota="4.82" data-vendas="20000" data-busca="webcam full hd 1080p com microfone webcam full hd 1080p microfone pc notebook home office acessórios e setup full hd 1080p microfone pc e notebook">
+  <a class="foto" href="#p48" data-abrir="48" aria-label="Ver detalhes: Webcam Full HD 1080p com Microfone"><span class="num">Nº 48</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/48.webp" alt="Webcam Full HD 1080p com Microfone" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p48" data-abrir="48">Webcam Full HD 1080p com Microfone</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Full HD 1080p</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Microfone</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>PC e notebook</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,82</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>20 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 29,99</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/8pmuqh8mhW" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p48" data-abrir="48">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="49" data-cat="acessorios" data-preco="78.90" data-nota="4.95" data-vendas="932" data-busca="placa de captura hdmi usb 3.0 placa captura de vídeo 4k 1080p 60fps full hd usb 3.0 hdmi acessórios e setup hdmi usb 3.0 1080p 60fps">
+  <a class="foto" href="#p49" data-abrir="49" aria-label="Ver detalhes: Placa de Captura HDMI USB 3.0"><span class="num">Nº 49</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/49.webp" alt="Placa de Captura HDMI USB 3.0" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa cb"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Custo-benefício</span>
+    <h3><a href="#p49" data-abrir="49">Placa de Captura HDMI USB 3.0</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>HDMI</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>USB 3.0</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>1080p 60fps</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,95</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>932 vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="valor"><small>R$</small> 78,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/8fTUeO9Q2V" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p49" data-abrir="49">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article><article class="card" data-n="50" data-cat="acessorios" data-preco="39.90" data-nota="4.89" data-vendas="10000" data-busca="organizador de cabos sob a mesa organizador de cabos e fios guia de cabos baixo mesa setup gamer esconder cabos canal acessórios e setup sob a mesa esconde fios">
+  <a class="foto" href="#p50" data-abrir="50" aria-label="Ver detalhes: Organizador de Cabos sob a Mesa"><span class="num">Nº 50</span><span class="coracao" title="Salvo"><svg class="ic sm" aria-hidden="true"><use href="#i-heartf"/></svg></span><img src="img/50.webp" alt="Organizador de Cabos sob a Mesa" loading="lazy" decoding="async"></a>
+  <div class="info">
+    <span class="faixa bar"><svg class="ic sm" aria-hidden="true"><use href="#i-tag"/></svg>Baratinho</span>
+    <h3><a href="#p50" data-abrir="50">Organizador de Cabos sob a Mesa</a></h3>
+    <ul class="specs"><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Sob a mesa</li><li><svg class="ic sm" aria-hidden="true"><use href="#i-chip"/></svg>Esconde fios</li></ul>
+    <p class="stats"><span class="nota"><svg class="ic sm" aria-hidden="true"><use href="#i-star"/></svg>4,89</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-cart"/></svg>10 mil+ vendas</span><span><svg class="ic sm" aria-hidden="true"><use href="#i-check"/></svg>Loja verificada</span></p>
+  </div>
+  <div class="compra">
+    <p class="preco"><span class="apartir">a partir de</span><span class="valor"><small>R$</small> 39,90</span></p>
+    <p class="data">preço de 28/10/2026, pode mudar</p>
+    <a class="btn" href="https://s.shopee.com.br/8VA4S5A3NU" target="_blank" rel="sponsored noopener"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Ver na Shopee<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+    <a class="det-link" href="#p50" data-abrir="50">Ver detalhes<svg class="ic sm" aria-hidden="true"><use href="#i-right"/></svg></a>
+  </div>
+</article></div>
+</section>
+  <p class="vazio" id="vazio" hidden>Nada encontrado. Tente outro nome ou o número do vídeo.</p>
+  <section class="sobre" id="sobre">
+    <h2>Como usar esta página</h2>
+    <ul>
+      <li><b>Número do vídeo:</b> cada produto tem o mesmo número do vídeo no TikTok. Digite o número na busca para achar.</li>
+      <li><b>Detalhes:</b> toque no produto para ver a ficha completa, os avisos e outros achados da mesma categoria.</li>
+      <li><b>Faixas:</b> <span style="color:var(--cyan)">Baratinho</span>, <span style="color:var(--amber)">Custo-benefício</span> e <span style="color:var(--pink)">Premium</span> separam os preços dentro de cada categoria.</li>
+      <li><b>Preço e nota:</b> coletados em 28/10/2026. Na Shopee eles mudam, então confira no anúncio antes de comprar.</li>
+      <li><b>Loja oficial / verificada:</b> é o que a Shopee mostra para o vendedor de cada anúncio.</li>
+      <li><b>Salvos:</b> o botão "Salvar produto" guarda o item só neste navegador.</li>
+      <li><b>#publi:</b> os botões "Ver na Shopee" são links de afiliado. Se você comprar, eu posso ganhar comissão, sem custo a mais para você.</li>
+      <li><b>Fotos:</b> tiradas dos próprios anúncios, com o fundo removido.</li>
+    </ul>
+  </section>
+</main>
+<section class="wrap detalhe" id="detalhe" hidden aria-live="polite"></section>
+<footer class="rodape">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg><span>PRODUTOS <b>DOS VÍDEOS</b></span></a>
+    <span class="lema"><svg class="ic sm" aria-hidden="true"><use href="#i-heart"/></svg>Achados para o seu setup</span>
+    <a class="topo" href="#inicio"><svg class="ic sm" aria-hidden="true"><use href="#i-up"/></svg>Voltar ao topo</a>
+    <p class="nota-legal">Página de links de afiliado. Não é uma página oficial da Shopee. Confira preço, frete e avaliações no anúncio antes de comprar.</p>
+  </div>
+</footer>
+<script>window.PRODUTOS = {"1": {"n": 1, "cat": "placas", "catNome": "Placas de vídeo e processadores", "ic": "gpu", "nome": "Placa de Vídeo AITEK RX 580 8GB (recondicionada)", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "939,99", "nota": "4,92", "vendas": "744", "oficial": false, "link": "https://s.shopee.com.br/1BWKFZQZZ", "specs": ["8GB GDDR5", "256 bits", "PCIe 3.0"], "chamada": "Placa dedicada de 8 GB com o menor preço entre as placas da lista. É recondicionada: leia o anúncio com calma antes de fechar.", "oque": "Placa de vídeo RX 580 de 8 GB da AITEK, recondicionada.", "praquem": "Quem quer placa de vídeo dedicada gastando menos e topa produto recondicionado.", "avisos": ["Produto recondicionado: leia a descrição completa e as condições do vendedor antes de comprar.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "2": {"n": 2, "cat": "placas", "catNome": "Placas de vídeo e processadores", "ic": "gpu", "nome": "Placa de Vídeo XFX Radeon RX 7600 8GB", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "2.216,79", "nota": "4,94", "vendas": "277", "oficial": true, "link": "https://s.shopee.com.br/W7mvAXWYg", "specs": ["8GB GDDR6", "128 bits", "RDNA 3"], "chamada": "Geração RDNA 3 da AMD com 8 GB GDDR6, comprada direto de loja oficial.", "oque": "Placa de vídeo AMD Radeon RX 7600 de 8 GB GDDR6, modelo XFX Speedster SWFT210.", "praquem": "Quem está montando um PC gamer intermediário e quer uma placa de geração atual, comprada em loja oficial.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "3": {"n": 3, "cat": "placas", "catNome": "Placas de vídeo e processadores", "ic": "gpu", "nome": "Placa de Vídeo MSI RTX 5060 8GB Shadow 2X OC", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "3.208,99", "nota": "4,95", "vendas": "3 mil+", "oficial": true, "link": "https://s.shopee.com.br/LoMirY9tf", "specs": ["8GB GDDR7", "128 bits", "Série RTX 50"], "chamada": "Série RTX 50 da NVIDIA com memória GDDR7 e mais de 3 mil vendas em loja oficial.", "oque": "Placa de vídeo NVIDIA GeForce RTX 5060 de 8 GB GDDR7, modelo MSI Shadow 2X OC.", "praquem": "Quem quer uma placa da série RTX 50 e prefere comprar em loja oficial.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "4": {"n": 4, "cat": "placas", "catNome": "Placas de vídeo e processadores", "ic": "gpu", "nome": "Processador AMD Ryzen 5 5500", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "629,00", "nota": "4,96", "vendas": "6 mil+", "oficial": true, "link": "https://s.shopee.com.br/AAIIQvwiwa", "specs": ["6 núcleos", "12 threads", "Soquete AM4"], "chamada": "Seis núcleos no soquete AM4, com mais de 6 mil vendas e nota 4,96.", "oque": "Processador AMD Ryzen 5 5500 de 6 núcleos e 12 threads, soquete AM4.", "praquem": "Quem vai montar ou atualizar um PC na plataforma AM4.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "5": {"n": 5, "cat": "placas", "catNome": "Placas de vídeo e processadores", "ic": "gpu", "nome": "Processador AMD Ryzen 7 5700", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "1.028,90", "nota": "4,95", "vendas": "1 mil+", "oficial": true, "link": "https://s.shopee.com.br/9zysEcxMHZ", "specs": ["8 núcleos", "16 threads", "Até 4,6 GHz"], "chamada": "Oito núcleos e dezesseis threads sem sair da plataforma AM4.", "oque": "Processador AMD Ryzen 7 5700 de 8 núcleos e 16 threads, soquete AM4.", "praquem": "Quem quer mais núcleos para jogar e fazer live ou editar, sem trocar de plataforma AM4.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "6": {"n": 6, "cat": "memoria", "catNome": "Memória RAM e SSD", "ic": "ram", "nome": "Memória Kingston Fury Beast 8GB DDR4 3200MHz", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "465,49", "nota": "5,0", "vendas": "60", "oficial": false, "link": "https://s.shopee.com.br/9APlF7Txk6", "specs": ["8GB DDR4", "3200 MHz", "CL16"], "chamada": "Um pente DDR4 de 3200 MHz pra somar memória no seu PC. O anúncio diz: nova e lacrada.", "oque": "Pente de memória Kingston Fury Beast DDR4 de 8 GB a 3200 MHz (KF432C16BB/8).", "praquem": "Quem quer adicionar mais um pente de 8 GB DDR4 no PC.", "avisos": ["Confere se a sua placa-mãe usa DDR4 antes de comprar.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "7": {"n": 7, "cat": "memoria", "catNome": "Memória RAM e SSD", "ic": "ram", "nome": "Memória Kingston HyperX Fury DDR3/DDR4", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": true, "valor": "151", "nota": "4,83", "vendas": "2 mil+", "oficial": false, "link": "https://s.shopee.com.br/906L2oUb55", "specs": ["DDR3 ou DDR4", "4 a 16 GB", "Desktop"], "chamada": "PC antigo também merece upgrade: DDR3 ou DDR4 no mesmo anúncio, de 4 a 16 GB.", "oque": "Memória Kingston HyperX Fury, com opções DDR3 e DDR4 de 4, 8 ou 16 GB no mesmo anúncio.", "praquem": "Quem tem PC mais antigo e precisa achar a memória certa (DDR3 ou DDR4) para um upgrade.", "avisos": ["Confere se o seu PC é DDR3 ou DDR4 e escolhe a opção certa no anúncio.", "O preço muda conforme a opção escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "8": {"n": 8, "cat": "memoria", "catNome": "Memória RAM e SSD", "ic": "ram", "nome": "SSD MADFOX SATA 2.5\" (120/240/480GB)", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": true, "valor": "159,99", "nota": "4,94", "vendas": "499", "oficial": false, "link": "https://s.shopee.com.br/2LZR6Ytybo", "specs": ["SATA 3", "2,5\"", "120 a 480 GB"], "chamada": "Saia do HD: SSD SATA de 2,5\" que serve em notebook e PC, de 120 a 480 GB.", "oque": "SSD SATA de 2.5 polegadas da MADFOX, com opções de 120, 240 e 480 GB.", "praquem": "Quem ainda usa HD no notebook ou no PC e quer trocar por SSD gastando pouco.", "avisos": ["O preço muda conforme a opção escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "9": {"n": 9, "cat": "memoria", "catNome": "Memória RAM e SSD", "ic": "ram", "nome": "SSD Adata SU650 SATA 2.5\"", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": true, "valor": "361,62", "nota": "4,88", "vendas": "137", "oficial": false, "link": "https://s.shopee.com.br/2VsrIrtLGr", "specs": ["SATA 6 Gb/s", "2,5\"", "240 GB a 1 TB"], "chamada": "SSD SATA da Adata com opções de 240 GB até 1 TB, pra notebook ou PC.", "oque": "SSD SATA de 2.5 polegadas Adata SU650, com opções de 240 GB a 1 TB.", "praquem": "Quem quer um SSD SATA de marca conhecida para notebook ou PC.", "avisos": ["O preço muda conforme a opção escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "10": {"n": 10, "cat": "memoria", "catNome": "Memória RAM e SSD", "ic": "ram", "nome": "SSD Kingston NV3 NVMe PCIe 4.0", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": true, "valor": "839", "nota": "4,97", "vendas": "787", "oficial": false, "link": "https://s.shopee.com.br/20wahwvFHm", "specs": ["NVMe M.2", "PCIe 4.0", "500 GB a 4 TB"], "chamada": "NVMe PCIe 4.0 no formato M.2, de 500 GB até 4 TB.", "oque": "SSD NVMe M.2 Kingston NV3 PCIe 4.0, com opções de 500 GB a 4 TB.", "praquem": "Quem tem slot M.2 na placa-mãe e quer um SSD NVMe PCIe 4.0.", "avisos": ["Confere se a sua placa-mãe tem slot M.2.", "O preço muda conforme a opção escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "11": {"n": 11, "cat": "montagem", "catNome": "Placas-mãe, fontes e gabinetes", "ic": "case", "nome": "Placa-Mãe Asus TUF Gaming B550M-Plus", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "809,00", "nota": "4,93", "vendas": "6 mil+", "oficial": true, "link": "https://s.shopee.com.br/3LRyIQLWgr", "specs": ["Chipset B550", "Soquete AM4", "Micro-ATX"], "chamada": "Placa-mãe B550 da linha TUF Gaming, com mais de 6 mil vendas em loja oficial.", "oque": "Placa-mãe Asus TUF Gaming B550M-Plus, chipset B550, soquete AM4, formato mATX.", "praquem": "Quem está montando um PC com Ryzen AM4 e quer uma placa B550 de linha gamer.", "avisos": ["Confere se o seu processador é AM4 antes de comprar.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "12": {"n": 12, "cat": "montagem", "catNome": "Placas-mãe, fontes e gabinetes", "ic": "case", "nome": "Fonte MSI MAG 650W 80 Plus Bronze", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "319,00", "nota": "4,96", "vendas": "4 mil+", "oficial": true, "link": "https://s.shopee.com.br/3qOEtLJcfy", "specs": ["650 W", "80 Plus Bronze", "ATX"], "chamada": "650 W com selo 80 Plus Bronze, da MSI, com mais de 4 mil vendas em loja oficial.", "oque": "Fonte MSI MAG 650 W, padrão ATX, certificação 80 Plus Bronze.", "praquem": "Quem está montando PC com placa de vídeo dedicada e quer fonte com certificação.", "avisos": ["Confere a potência que o seu PC precisa antes de comprar.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "13": {"n": 13, "cat": "montagem", "catNome": "Placas-mãe, fontes e gabinetes", "ic": "case", "nome": "Fonte Cooler Master MWE Gold 650 V3", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "350,90", "nota": "4,98", "vendas": "964", "oficial": true, "link": "https://s.shopee.com.br/3g4oh2KG0x", "specs": ["650 W", "80 Plus Gold", "ATX 3.1"], "chamada": "Selo 80 Plus Gold, padrão ATX 3.1 e PFC ativo, com nota 4,98.", "oque": "Fonte Cooler Master MWE Gold 650 V3, 650 W, ATX 3.1, 80 Plus Gold, PFC ativo.", "praquem": "Quem quer uma fonte com certificação Gold no setup.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "14": {"n": 14, "cat": "montagem", "catNome": "Placas-mãe, fontes e gabinetes", "ic": "case", "nome": "Gabinete Pichau Atom X", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "126,47", "nota": "4,94", "vendas": "4 mil+", "oficial": true, "link": "https://s.shopee.com.br/2qVhhVNQho", "specs": ["Mini-Tower", "Lateral de vidro", "2 fans"], "chamada": "Gabinete aquário com lateral de vidro e 2 fans inclusos, no preço de entrada.", "oque": "Gabinete gamer Pichau Atom X, mini-tower, estilo aquário com lateral de vidro e 2 fans inclusos.", "praquem": "Quem está montando PC com placa-mãe compacta e quer gabinete com vidro gastando pouco.", "avisos": ["É mini-tower: confere se a sua placa-mãe cabe.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "15": {"n": 15, "cat": "montagem", "catNome": "Placas-mãe, fontes e gabinetes", "ic": "case", "nome": "Gabinete Mancer CV700L", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "247,33", "nota": "4,95", "vendas": "4 mil+", "oficial": true, "link": "https://s.shopee.com.br/2gCHVCO42n", "specs": ["Mid Tower", "Lateral de vidro", "Estilo aquário"], "chamada": "Mid tower estilo aquário pra deixar as peças à mostra, com mais de 4 mil vendas.", "oque": "Gabinete gamer Mancer CV700L, mid tower, estilo aquário com lateral de vidro.", "praquem": "Quem quer gabinete maior, estilo aquário, para mostrar as peças.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "16": {"n": 16, "cat": "coolers", "catNome": "Coolers e water coolers", "ic": "fan", "nome": "Water Cooler TGT Spartel V2 240mm", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "178,81", "nota": "4,95", "vendas": "7 mil+", "oficial": true, "link": "https://s.shopee.com.br/4qGm5DJPH0", "specs": ["240 mm", "Rainbow", "Water cooler"], "chamada": "Water cooler de 240 mm com luz Rainbow e mais de 7 mil vendas em loja oficial.", "oque": "Water cooler TGT Spartel V2 com radiador de 240 mm e iluminação Rainbow.", "praquem": "Quem quer trocar o cooler box por water cooler sem gastar muito.", "avisos": ["Confere se o seu gabinete tem espaço pra radiador de 240 mm.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "17": {"n": 17, "cat": "coolers", "catNome": "Coolers e water coolers", "ic": "fan", "nome": "Water Cooler Pichau Aqua 240X ARGB", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "276,03", "nota": "4,95", "vendas": "1 mil+", "oficial": true, "link": "https://s.shopee.com.br/4fxLsuK2bz", "specs": ["240 mm", "ARGB", "Water cooler"], "chamada": "Radiador de 240 mm com ARGB pra quem quer luz endereçável no processador.", "oque": "Water cooler Pichau Aqua 240X com radiador de 240 mm e iluminação ARGB.", "praquem": "Quem quer water cooler de 240 mm com ARGB no setup.", "avisos": ["Confere se o seu gabinete tem espaço pra radiador de 240 mm.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "18": {"n": 18, "cat": "coolers", "catNome": "Coolers e water coolers", "ic": "fan", "nome": "Water Cooler Mancer Mystic G1 240mm Branco", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "326,90", "nota": "4,94", "vendas": "397", "oficial": true, "link": "https://s.shopee.com.br/4VdvgbKfwy", "specs": ["240 mm", "ARGB", "Branco"], "chamada": "Versão branca com ARGB, pra quem está montando um setup clean.", "oque": "Water cooler Mancer Mystic G1, 240 mm, ARGB, na versão branca.", "praquem": "Quem está montando setup branco/clean.", "avisos": ["Confere se o seu gabinete tem espaço pra radiador de 240 mm.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "19": {"n": 19, "cat": "coolers", "catNome": "Coolers e water coolers", "ic": "fan", "nome": "Air Cooler Knup G-VR342", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "55,75", "nota": "4,86", "vendas": "401", "oficial": true, "link": "https://s.shopee.com.br/4LKVUILJHx", "specs": ["Intel e AMD", "Fan duplo", "Air cooler"], "chamada": "Pra trocar o cooler do processador gastando pouco: compatível com Intel e AMD.", "oque": "Air cooler Knup G-VR342 para processador, compatível com Intel e AMD.", "praquem": "Quem quer trocar o cooler original do processador gastando pouco.", "avisos": ["Confere a altura máxima de cooler que o seu gabinete aceita.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "20": {"n": 20, "cat": "coolers", "catNome": "Coolers e water coolers", "ic": "fan", "nome": "Air Cooler Duplo RGB universal", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "99,00", "nota": "4,92", "vendas": "1 mil+", "oficial": false, "link": "https://s.shopee.com.br/4B15HzLwcw", "specs": ["Intel e AMD", "RGB", "Air cooler"], "chamada": "Air cooler com RGB, compatível com Intel e AMD, nota 4,92 com mais de mil vendas.", "oque": "Air cooler para processador com iluminação RGB, compatível com Intel e AMD.", "praquem": "Quem quer air cooler com RGB pra dar cor ao gabinete.", "avisos": ["Confere a altura máxima de cooler que o seu gabinete aceita.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "21": {"n": 21, "cat": "monitores", "catNome": "Monitores", "ic": "monitor", "nome": "Monitor Mancer Horizon Z3B 21.5\" 100Hz", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "407,86", "nota": "4,86", "vendas": "6 mil+", "oficial": true, "link": "https://s.shopee.com.br/BUwWevjfc", "specs": ["21,5\"", "100 Hz", "VA Full HD"], "chamada": "Primeiro monitor gamer: Full HD a 100 Hz, com mais de 6 mil vendas em loja oficial.", "oque": "Monitor gamer Mancer Horizon Z3B de 21.5 polegadas, painel VA, Full HD, 100 Hz.", "praquem": "Quem ainda joga em tela de 60 Hz ou na TV e quer um primeiro monitor gamer.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "22": {"n": 22, "cat": "monitores", "catNome": "Monitores", "ic": "monitor", "nome": "Monitor TGT Altay TS6 23.8\" 180Hz", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "591,90", "nota": "4,92", "vendas": "718", "oficial": true, "link": "https://s.shopee.com.br/1BWKLwN0b", "specs": ["23,8\"", "180 Hz", "IPS Full HD"], "chamada": "180 Hz em painel IPS Full HD de 23,8\".", "oque": "Monitor gamer TGT Altay TS6 de 23.8 polegadas, painel IPS, Full HD, 180 Hz.", "praquem": "Quem joga competitivo e quer taxa de atualização alta em Full HD.", "avisos": ["Confere se o seu PC tem saída HDMI ou VGA.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "23": {"n": 23, "cat": "monitores", "catNome": "Monitores", "ic": "monitor", "nome": "Monitor Curvo Concórdia CZ270F 27\" 100Hz", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "729,00", "nota": "4,94", "vendas": "3 mil+", "oficial": true, "link": "https://s.shopee.com.br/W7mvGuSzi", "specs": ["27\" curvo", "100 Hz", "Full HD"], "chamada": "Tela curva de 27\" pra jogo e vídeo, com mais de 3 mil vendas.", "oque": "Monitor gamer curvo Concórdia CZ270F de 27 polegadas, Full HD, 100 Hz.", "praquem": "Quem quer tela grande e curva pra jogar e ver vídeo.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "24": {"n": 24, "cat": "monitores", "catNome": "Monitores", "ic": "monitor", "nome": "Monitor LG UltraGear 24GS60F 24\" 180Hz", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "834,86", "nota": "4,92", "vendas": "560", "oficial": true, "link": "https://s.shopee.com.br/LoMixv6Kh", "specs": ["24\"", "180 Hz", "1 ms"], "chamada": "Linha UltraGear da LG, com 180 Hz e 1 ms, em loja oficial.", "oque": "Monitor gamer LG UltraGear 24GS60F de 24 polegadas, 180 Hz, 1 ms.", "praquem": "Quem quer monitor 180 Hz de marca conhecida.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "25": {"n": 25, "cat": "monitores", "catNome": "Monitores", "ic": "monitor", "nome": "Monitor Samsung Odyssey G5 32\" QHD 165Hz", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "1.299,00", "nota": "4,90", "vendas": "2 mil+", "oficial": true, "link": "https://s.shopee.com.br/qkdJstCJo", "specs": ["32\"", "QHD", "165 Hz"], "chamada": "32\" em QHD com 165 Hz e FreeSync, pra quem quer subir de resolução.", "oque": "Monitor gamer Samsung Odyssey G5 de 32 polegadas, QHD, 165 Hz, com FreeSync.", "praquem": "Quem quer subir para resolução QHD em tela grande.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "26": {"n": 26, "cat": "teclados", "catNome": "Teclados", "ic": "keyboard", "nome": "Teclado Gamer Semi-mecânico RGB", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "38,88", "nota": "4,84", "vendas": "7 mil+", "oficial": false, "link": "https://s.shopee.com.br/8KqeFgisC3", "specs": ["Semi-mecânico", "RGB", "Anti-ghosting"], "chamada": "Teclado RGB semi-mecânico pra começar o setup gastando pouco.", "oque": "Teclado gamer semi-mecânico com iluminação RGB e anti-ghosting.", "praquem": "Quem está começando o setup e quer um teclado iluminado bem barato.", "avisos": ["Confere no anúncio se o layout é ABNT2 (com Ç).", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "27": {"n": 27, "cat": "teclados", "catNome": "Teclados", "ic": "keyboard", "nome": "Teclado Mecânico TGT Sherman Compacto", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "99,99", "nota": "4,94", "vendas": "10 mil+", "oficial": true, "link": "https://s.shopee.com.br/8pmuqbgyBA", "specs": ["Switch azul", "ABNT2", "Compacto"], "chamada": "Seu primeiro teclado mecânico: switch azul, ABNT2 com Ç e mais de 10 mil vendas.", "oque": "Teclado mecânico compacto TGT Sherman, switch azul, padrão ABNT2, iluminação Rainbow.", "praquem": "Quem quer o primeiro teclado mecânico, com Ç e barulhinho de switch azul.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "28": {"n": 28, "cat": "teclados", "catNome": "Teclados", "ic": "keyboard", "nome": "Teclado Mecânico Titorion 60% Hot Swap", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "144,80", "nota": "4,95", "vendas": "2 mil+", "oficial": false, "link": "https://s.shopee.com.br/8fTUeIhbW9", "specs": ["60%", "Hot swap", "ABNT2"], "chamada": "Hot swap: troque os switches sem solda. Formato 60%, ABNT2 e RGB.", "oque": "Teclado mecânico 60% Titorion, ABNT2, hot swap e RGB.", "praquem": "Quem quer um teclado compacto e trocar os switches sem solda.", "avisos": ["Confere no anúncio qual switch vem instalado.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "29": {"n": 29, "cat": "teclados", "catNome": "Teclados", "ic": "keyboard", "nome": "Teclado Mecânico Redragon Lakshmi 60%", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "198,90", "nota": "4,97", "vendas": "460", "oficial": true, "link": "https://s.shopee.com.br/9APlFDfhVG", "specs": ["60%", "Switch marrom", "ABNT2"], "chamada": "Formato 60% com switch marrom, pra liberar espaço na mesa pro mouse.", "oque": "Teclado mecânico Redragon Lakshmi 60%, ABNT2, switch marrom, iluminação Rainbow.", "praquem": "Quem quer teclado compacto com switch marrom (meio-termo entre silencioso e tátil).", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "30": {"n": 30, "cat": "teclados", "catNome": "Teclados", "ic": "keyboard", "nome": "Teclado Magnético Redragon Fizz", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "248,90", "nota": "4,97", "vendas": "68", "oficial": true, "link": "https://s.shopee.com.br/906L2ugKqF", "specs": ["60%", "Switch magnético", "RGB"], "chamada": "Switch magnético AmberMag linear num teclado 60% com RGB.", "oque": "Teclado magnético Redragon Fizz 60%, switch magnético AmberMag linear, RGB.", "praquem": "Quem quer testar teclado com switch magnético.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "31": {"n": 31, "cat": "mouses", "catNome": "Mouses e mousepads", "ic": "mouse", "nome": "Mouse Gamer X7 3200 DPI", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "22,88", "nota": "4,86", "vendas": "5 mil+", "oficial": false, "link": "https://s.shopee.com.br/6VP04LEsoq", "specs": ["3200 DPI", "Com fio", "LED"], "chamada": "Mouse gamer com LED e até 3200 DPI pra quem quer gastar o mínimo.", "oque": "Mouse gamer X7 com fio, até 3200 DPI e LED.", "praquem": "Quem precisa de um mouse gamer básico gastando o mínimo.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "32": {"n": 32, "cat": "mouses", "catNome": "Mouses e mousepads", "ic": "mouse", "nome": "Mouse Gamer Sem Fio 2.4GHz + Bluetooth", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": true, "valor": "53,88", "nota": "4,85", "vendas": "2 mil+", "oficial": false, "link": "https://s.shopee.com.br/6L5Zs2FW9p", "specs": ["Sem fio", "Bluetooth 5.0", "Recarregável"], "chamada": "Sem fio, por 2.4 GHz ou Bluetooth, e recarregável. Chega de fio enroscando.", "oque": "Mouse gamer sem fio com conexão 2.4 GHz e Bluetooth 5.0, recarregável e com RGB.", "praquem": "Quem quer se livrar do fio sem gastar muito.", "avisos": ["O preço muda conforme a opção escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "33": {"n": 33, "cat": "mouses", "catNome": "Mouses e mousepads", "ic": "mouse", "nome": "Mouse Redragon Cobra M711 V2", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "137,60", "nota": "4,93", "vendas": "208", "oficial": false, "link": "https://s.shopee.com.br/6Am9fjG9Uo", "specs": ["12.400 DPI", "8 botões", "RGB"], "chamada": "Oito botões, até 12.400 DPI e RGB, em preto ou branco.", "oque": "Mouse gamer Redragon Cobra M711 V2, até 12.400 DPI, 8 botões, RGB.", "praquem": "Quem quer um mouse gamer com fio de marca conhecida e botões extras.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "34": {"n": 34, "cat": "mouses", "catNome": "Mouses e mousepads", "ic": "mouse", "nome": "Mousepad Gamer APEX Control 49x42", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": true, "valor": "69,89", "nota": "4,96", "vendas": "9 mil+", "oficial": false, "link": "https://s.shopee.com.br/60SjTQGmpn", "specs": ["49 x 42 cm", "Tamanho grande"], "chamada": "Mousepad grande de 49 x 42 cm, com mais de 9 mil vendas e nota 4,96.", "oque": "Mousepad gamer APEX Control grande, 49x42 cm.", "praquem": "Quem joga com sensibilidade baixa e precisa de espaço para o mouse.", "avisos": ["Escolhe a cor/estampa no anúncio: o preço muda conforme a opção.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "35": {"n": 35, "cat": "mouses", "catNome": "Mouses e mousepads", "ic": "mouse", "nome": "Mouse Pad Gamer Traxen", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": true, "valor": "15,49", "nota": "4,87", "vendas": "7 mil+", "oficial": false, "link": "https://s.shopee.com.br/5q9JH7HQAm", "specs": ["Até 70 x 35 cm", "3 tamanhos", "Estampa de dragão"], "chamada": "Estampa de dragão em 3 tamanhos, até 70 x 35 cm.", "oque": "Mouse pad gamer Traxen com estampa de dragão, em 3 tamanhos (até 70x35 cm).", "praquem": "Quem quer um mousepad com visual diferente pagando pouco.", "avisos": ["O preço muda conforme o tamanho escolhido.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "36": {"n": 36, "cat": "audio", "catNome": "Headsets e microfones", "ic": "headphones", "nome": "Headset Gamer TGT Diver V2", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "54,61", "nota": "4,88", "vendas": "7 mil+", "oficial": true, "link": "https://s.shopee.com.br/qkdJwx0ru", "specs": ["Drivers 40 mm", "Rainbow"], "chamada": "Headset com drivers de 40 mm e luz Rainbow, com mais de 7 mil vendas em loja oficial.", "oque": "Headset gamer TGT Diver V2 com drivers de 40 mm e iluminação Rainbow.", "praquem": "Quem quer um headset gamer barato com iluminação.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "37": {"n": 37, "cat": "audio", "catNome": "Headsets e microfones", "ic": "headphones", "nome": "Headset Redragon Zeus Lite", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "205,79", "nota": "4,93", "vendas": "1 mil+", "oficial": true, "link": "https://s.shopee.com.br/gRD7dxeCt", "specs": ["Drivers 53 mm", "Com fio"], "chamada": "Drivers de 53 mm num headset com fio da Redragon. Quer sem fio? Veja o nº 38.", "oque": "Headset gamer Redragon Zeus Lite com fio e drivers de 53 mm.", "praquem": "Quem quer headset com driver grande e marca conhecida.", "avisos": ["Ele é com fio; se quiser sem fio, olha o nº 38 na página.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "38": {"n": 38, "cat": "audio", "catNome": "Headsets e microfones", "ic": "headphones", "nome": "Headset Redragon Zeus Pro Sem Fio", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": true, "valor": "319,90", "nota": "4,90", "vendas": "299", "oficial": false, "link": "https://s.shopee.com.br/1qdAVmtCq8", "specs": ["Sem fio 2.4 GHz", "Bluetooth", "Mic destacável"], "chamada": "Sem fio por 2.4 GHz ou Bluetooth, com microfone destacável.", "oque": "Headset gamer Redragon Zeus Pro sem fio, com 2.4 GHz, Bluetooth e microfone destacável.", "praquem": "Quem quer headset sem fio que funcione no PC e no celular.", "avisos": ["O preço muda conforme a versão escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "39": {"n": 39, "cat": "audio", "catNome": "Headsets e microfones", "ic": "headphones", "nome": "Microfone TGT Anzer V2 USB", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "87,50", "nota": "4,87", "vendas": "410", "oficial": true, "link": "https://s.shopee.com.br/1gJkJTtqB7", "specs": ["Condensador", "USB", "RGB"], "chamada": "Primeiro microfone pra live: condensador cardioide USB, plug & play, com RGB.", "oque": "Microfone gamer TGT Anzer V2, condensador cardioide USB, plug & play, RGB.", "praquem": "Quem quer começar a fazer live ou gravar a voz sem mesa de som.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "40": {"n": 40, "cat": "audio", "catNome": "Headsets e microfones", "ic": "headphones", "nome": "Microfone Fifine SFM2 USB RGB", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "134,99", "nota": "4,96", "vendas": "723", "oficial": true, "link": "https://s.shopee.com.br/1W0K7AuTW6", "specs": ["Condensador", "USB", "RGB"], "chamada": "Microfone condensador USB com RGB e nota 4,96 em loja oficial.", "oque": "Microfone condensador Fifine SFM2 USB com RGB.", "praquem": "Quem faz live, grava vídeo ou joga em call e quer microfone USB dedicado.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "41": {"n": 41, "cat": "cadeiras", "catNome": "Cadeiras e mesas", "ic": "chair", "nome": "Cadeira Gamer Fortt Harbin", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "220,00", "nota": "4,73", "vendas": "380", "oficial": true, "link": "https://s.shopee.com.br/4LKVUP0svr", "specs": ["Cor verde"], "chamada": "A cadeira mais em conta da lista, na cor verde, vendida por loja oficial.", "oque": "Cadeira gamer Fortt Harbin na cor verde.", "praquem": "Quem quer uma cadeira gamer pagando pouco.", "avisos": ["Confere no anúncio o peso máximo e as medidas.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "42": {"n": 42, "cat": "cadeiras", "catNome": "Cadeiras e mesas", "ic": "chair", "nome": "Cadeira Gamer Fox Racer Nordic", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "357,79", "nota": "4,90", "vendas": "519", "oficial": true, "link": "https://s.shopee.com.br/4qGm5Jyyuy", "specs": ["Cor preta"], "chamada": "Fox Racer Nordic preta, com nota 4,9 em loja oficial.", "oque": "Cadeira gamer Fox Racer Nordic preta.", "praquem": "Quem quer cadeira gamer de marca na faixa intermediária.", "avisos": ["Confere no anúncio o peso máximo e as medidas.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "43": {"n": 43, "cat": "cadeiras", "catNome": "Cadeiras e mesas", "ic": "chair", "nome": "Cadeira Gamer Reclinável com Apoio de Pés", "faixa": "Premium", "fcls": "pr", "ficon": "crown", "apartir": false, "valor": "499,00", "nota": "4,90", "vendas": "4 mil+", "oficial": true, "link": "https://s.shopee.com.br/4fxLt0zcFx", "specs": ["Reclinável", "Apoio de pés", "Giratória"], "chamada": "Reclinável, com apoio de pés ajustável e base giratória. Mais de 4 mil vendas.", "oque": "Cadeira gamer ergonômica reclinável com apoio de pés ajustável e base giratória.", "praquem": "Quem passa muitas horas sentado e quer reclinar com apoio de pés.", "avisos": ["Escolhe a cor no anúncio e confere o peso máximo.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "44": {"n": 44, "cat": "cadeiras", "catNome": "Cadeiras e mesas", "ic": "chair", "nome": "Escrivaninha Gamer com Nichos", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "96,61", "nota": "4,80", "vendas": "2 mil+", "oficial": true, "link": "https://s.shopee.com.br/5AtcTvxiF4", "specs": ["Com nichos"], "chamada": "Escrivaninha com nichos pra montar o primeiro setup no quarto.", "oque": "Escrivaninha gamer para computador com nichos.", "praquem": "Quem precisa de uma mesa simples e barata para montar o setup no quarto.", "avisos": ["Confere as medidas no anúncio antes de comprar.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "45": {"n": 45, "cat": "cadeiras", "catNome": "Cadeiras e mesas", "ic": "chair", "nome": "Mesa Escrivaninha Industrial 116cm", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": true, "valor": "189,00", "nota": "4,79", "vendas": "1 mil+", "oficial": false, "link": "https://s.shopee.com.br/50aCHcyLa3", "specs": ["116 cm", "Estilo industrial"], "chamada": "116 cm de mesa em estilo industrial pra caber monitor, teclado e mais.", "oque": "Mesa escrivaninha estilo industrial de 116 cm.", "praquem": "Quem quer mais espaço na mesa e visual industrial.", "avisos": ["Mede o espaço da sua parede e confere a profundidade no anúncio.", "O preço muda conforme a opção escolhida no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "46": {"n": 46, "cat": "acessorios", "catNome": "Acessórios e setup", "ic": "gamepad", "nome": "Controle GameSir T4 Nova Lite", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "179,00", "nota": "4,96", "vendas": "7 mil+", "oficial": true, "link": "https://s.shopee.com.br/9APlFJ7W1Y", "specs": ["Sem fio", "PC e Switch", "Android e iOS"], "chamada": "Um controle sem fio pra PC, Switch, Android e iOS, com mais de 7 mil vendas.", "oque": "Controle sem fio GameSir T4 Nova Lite, compatível com PC, Switch, Android e iOS.", "praquem": "Quem joga no PC ou no celular e quer controle sem fio.", "avisos": ["Escolhe a cor no anúncio.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "47": {"n": 47, "cat": "acessorios", "catNome": "Acessórios e setup", "ic": "gamepad", "nome": "Fita de LED RGB 5050 com Bluetooth", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": true, "valor": "19,67", "nota": "4,89", "vendas": "20 mil+", "oficial": false, "link": "https://s.shopee.com.br/906L3089MX", "specs": ["RGB 5050", "Bluetooth", "App"], "chamada": "Luz RGB atrás do monitor ou da TV, com a cor escolhida pelo app.", "oque": "Fita de LED RGB 5050 com controle por Bluetooth e aplicativo.", "praquem": "Quem quer dar cor ao setup ou colocar luz atrás da TV ou do monitor gastando pouco.", "avisos": ["Escolhe o tamanho no anúncio: o preço muda conforme a opção.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": true}, "48": {"n": 48, "cat": "acessorios", "catNome": "Acessórios e setup", "ic": "gamepad", "nome": "Webcam Full HD 1080p com Microfone", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": false, "valor": "29,99", "nota": "4,82", "vendas": "20 mil+", "oficial": false, "link": "https://s.shopee.com.br/8pmuqh8mhW", "specs": ["Full HD 1080p", "Microfone", "PC e notebook"], "chamada": "Webcam Full HD 1080p com microfone embutido e mais de 20 mil vendas.", "oque": "Webcam Full HD 1080p com microfone embutido, USB.", "praquem": "Quem precisa de webcam para live, chamada ou aula.", "avisos": ["Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "49": {"n": 49, "cat": "acessorios", "catNome": "Acessórios e setup", "ic": "gamepad", "nome": "Placa de Captura HDMI USB 3.0", "faixa": "Custo-benefício", "fcls": "cb", "ficon": "tag", "apartir": false, "valor": "78,90", "nota": "4,95", "vendas": "932", "oficial": false, "link": "https://s.shopee.com.br/8fTUeO9Q2V", "specs": ["HDMI", "USB 3.0", "1080p 60fps"], "chamada": "Leve a imagem do videogame pro PC pra gravar ou transmitir: HDMI e USB 3.0.", "oque": "Placa de captura HDMI USB 3.0 (anúncio: 1080p 60fps, entrada 4K).", "praquem": "Quem quer gravar ou transmitir o videogame no PC.", "avisos": ["Confere no anúncio se funciona com o seu videogame.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}, "50": {"n": 50, "cat": "acessorios", "catNome": "Acessórios e setup", "ic": "gamepad", "nome": "Organizador de Cabos sob a Mesa", "faixa": "Baratinho", "fcls": "bar", "ficon": "tag", "apartir": true, "valor": "39,90", "nota": "4,89", "vendas": "10 mil+", "oficial": false, "link": "https://s.shopee.com.br/8VA4S5A3NU", "specs": ["Sob a mesa", "Esconde fios"], "chamada": "Esconda os fios embaixo da mesa e deixe o setup limpo.", "oque": "Organizador de cabos para colocar embaixo da mesa.", "praquem": "Quem quer esconder a bagunça de fios do setup.", "avisos": ["Escolhe o tamanho no anúncio: o preço muda conforme a opção.", "Confira frete, prazo de entrega e avaliações no anúncio antes de comprar."], "amb": false}};</script>
+<script>
+(() => {
+  const P = window.PRODUTOS;
+  const busca = document.getElementById('busca');
+  const ordem = document.getElementById('ordem');
+  const chips = [...document.querySelectorAll('.chip')];
+  const secoes = [...document.querySelectorAll('.cat')];
+  const vazio = document.getElementById('vazio');
+  const hero = document.getElementById('inicio');
+  const main = document.getElementById('achados');
+  const det = document.getElementById('detalhe');
+  const cards = [...document.querySelectorAll('.card')];
+  const nSalvos = document.querySelector('.nsalvos');
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+  const ic = (n, cls = 'ic') => `<svg class="${cls}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+  const pad = n => String(n).padStart(2, '0');
+  cards.forEach(c => { c.dataset.b = norm(c.dataset.busca); });
+
+  // salvos (só neste navegador)
+  const K = 'achadinhos-salvos';
+  let salvos = new Set();
+  try { salvos = new Set(JSON.parse(localStorage.getItem(K) || '[]').map(Number)); } catch (e) {}
+  function gravar() {
+    try { localStorage.setItem(K, JSON.stringify([...salvos])); } catch (e) {}
+    marcar();
+  }
+  function marcar() {
+    cards.forEach(c => c.classList.toggle('salvo', salvos.has(+c.dataset.n)));
+    nSalvos.textContent = salvos.size;
+  }
+
+  // lista: busca, categoria, ordem
+  let cat = 'todas';
+  const ord = {
+    n: (a, b) => a.dataset.n - b.dataset.n,
+    vendas: (a, b) => b.dataset.vendas - a.dataset.vendas || a.dataset.n - b.dataset.n,
+    menor: (a, b) => a.dataset.preco - b.dataset.preco,
+    maior: (a, b) => b.dataset.preco - a.dataset.preco,
+    nota: (a, b) => b.dataset.nota - a.dataset.nota || b.dataset.vendas - a.dataset.vendas,
+  };
+  function aplicar() {
+    const q = norm(busca.value);
+    const num = q.replace(/^(n[ºo°]?\s*)/, '').replace(/^0+/, '');
+    let total = 0;
+    secoes.forEach(s => {
+      const lista = s.querySelector('.lista');
+      const itens = [...lista.children].sort(ord[ordem.value] || ord.n);
+      itens.forEach(c => lista.appendChild(c));
+      let vis = 0;
+      itens.forEach(c => {
+        const naCat = cat === 'todas' || (cat === 'salvos' ? salvos.has(+c.dataset.n) : s.dataset.cat === cat);
+        const ok = naCat && (!q || c.dataset.b.includes(q) || (num && c.dataset.n === num));
+        c.hidden = !ok; if (ok) vis++;
+      });
+      s.hidden = vis === 0;
+      s.querySelector('.count b').textContent = vis;
+      total += vis;
+    });
+    vazio.textContent = cat === 'salvos' && !salvos.size ? 'Você ainda não salvou nenhum produto. Abra um produto e toque em "Salvar produto".' : 'Nada encontrado. Tente outro nome ou o número do vídeo.';
+    vazio.hidden = total > 0;
+  }
+  function escolherCat(c) {
+    cat = c;
+    chips.forEach(x => { const on = x.dataset.cat === c; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+    aplicar();
+  }
+  busca.addEventListener('input', aplicar);
+  ordem.addEventListener('change', aplicar);
+  chips.forEach(ch => ch.addEventListener('click', () => escolherCat(ch.dataset.cat)));
+
+  // detalhe do produto
+  let aberto = null, rolagem = 0;
+  function tiles(p) {
+    const t = p.specs.map((s, i) => [i === 0 ? p.ic : 'chip', s]);
+    if (t.length < 3) t.push([p.oficial ? 'shield' : 'check', p.oficial ? 'Loja oficial' : 'Loja verificada']);
+    if (t.length < 3) t.push(['cart', p.vendas + ' vendas']);
+    return t.map(([i, s]) => `<li>${ic(i)}<span>${esc(s)}</span></li>`).join('');
+  }
+  function botaoSalvar(n) {
+    const s = salvos.has(n);
+    return `<button type="button" class="salvar" data-salvar="${n}" aria-pressed="${s}">${ic(s ? 'heartf' : 'heart')}${s ? 'Salvo' : 'Salvar produto'}</button>`;
+  }
+  function abrir(n) {
+    const p = P[n]; if (!p) return;
+    if (aberto === null) rolagem = window.scrollY;
+    const preco = `${p.apartir ? '<span class="apartir">a partir de</span>' : ''}<span class="valor"><small>R$</small> ${esc(p.valor)}</span>`;
+    const outros = Object.values(P).filter(o => o.cat === p.cat && o.n !== p.n).map(o => `
+      <a class="mini" href="#p${pad(o.n)}" data-abrir="${o.n}">
+        <span class="foto${o.amb ? ' amb' : ''}"><span class="num">Nº ${pad(o.n)}</span><img src="img/${pad(o.n)}.webp" alt="" loading="lazy"></span>
+        <strong>${esc(o.nome)}</strong>
+        <span class="mv">${o.apartir ? 'a partir de ' : ''}R$ ${esc(o.valor)}</span>
+      </a>`).join('');
+    det.innerHTML = `
+      <button type="button" class="voltar" data-voltar>${ic('left')}Voltar aos achadinhos</button>
+      <ol class="migalhas">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#achados" data-ircat="${p.cat}">${esc(p.catNome)}</a></li>
+        <li aria-current="page">Detalhes do produto</li>
+      </ol>
+      <div class="det-grid">
+        <div class="palco${p.amb ? ' amb' : ''}"><span class="num">Nº ${pad(p.n)}</span><img src="img/${pad(p.n)}.webp" alt="${esc(p.nome)}"></div>
+        <div class="caixa det-info">
+          <span><span class="faixa ${p.fcls}">${ic(p.ficon, 'ic sm')}${esc(p.faixa)}</span></span>
+          <h1>${esc(p.nome)}</h1>
+          <p class="stats"><span class="nota">${ic('star', 'ic sm')}${esc(p.nota)}</span><span>${ic('cart', 'ic sm')}${esc(p.vendas)} vendas</span><span>${ic(p.oficial ? 'shield' : 'check', 'ic sm')}${p.oficial ? 'Loja oficial' : 'Loja verificada'}</span></p>
+          <p class="preco">${preco}</p>
+          <p class="data">Preço consultado em 28/10/2026 · pode mudar.</p>
+          <div class="acoes">
+            <a class="btn" href="${esc(p.link)}" target="_blank" rel="sponsored noopener">${ic('ext')}Ver na Shopee${ic('right', 'ic sm')}</a>
+            ${botaoSalvar(p.n)}
+          </div>
+        </div>
+      </div>
+      <section class="caixa sobre-prod">
+        <h2>${ic('doc')}Sobre este produto</h2>
+        <p class="chamada">${esc(p.chamada)}</p>
+        <p>${esc(p.oque)}</p>
+        <p><b>Pra quem é:</b> ${esc(p.praquem)}</p>
+        <ul class="tiles">${tiles(p)}</ul>
+        <ul class="avisos">${p.avisos.map(a => `<li>${ic('info')}<span>${esc(a)}</span></li>`).join('')}</ul>
+        <div class="acoes"><a class="btn" href="${esc(p.link)}" target="_blank" rel="sponsored noopener">${ic('bag')}Ver na Shopee${ic('right', 'ic sm')}</a></div>
+      </section>
+      ${outros ? `<section class="outros"><h2>Outros achados: ${esc(p.catNome)}</h2><div class="mini-grid">${outros}</div></section>` : ''}`;
+    hero.hidden = true; main.hidden = true; det.hidden = false; aberto = n;
+    window.scrollTo(0, 0);
+    try { history.replaceState(null, '', '#p' + pad(n)); } catch (e) {}
+  }
+  function fechar(alvo) {
+    if (aberto === null) return;
+    const n = aberto;
+    det.hidden = true; hero.hidden = false; main.hidden = false; aberto = null;
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    if (alvo) { alvo.scrollIntoView(); return; }
+    const card = document.querySelector(`.card[data-n="${n}"]`);
+    if (card && !card.hidden) card.scrollIntoView({ block: 'center' }); else window.scrollTo(0, rolagem);
+  }
+
+  document.addEventListener('click', ev => {
+    const t = ev.target;
+    if (t.closest('.btn')) return;                       // "Ver na Shopee" segue o link de afiliado
+    const ab = t.closest('[data-abrir]');
+    if (ab) { ev.preventDefault(); abrir(+ab.dataset.abrir); return; }
+    const sv = t.closest('[data-salvar]');
+    if (sv) {
+      const n = +sv.dataset.salvar;
+      salvos.has(n) ? salvos.delete(n) : salvos.add(n);
+      gravar();
+      sv.outerHTML = botaoSalvar(n);
+      return;
+    }
+    if (t.closest('[data-voltar]')) { fechar(); return; }
+    const ir = t.closest('[data-ircat]');
+    if (ir) { ev.preventDefault(); const c = ir.dataset.ircat; fechar(document.getElementById(c)); escolherCat(c); document.getElementById(c).scrollIntoView(); return; }
+    const card = t.closest('.card');
+    if (card && !t.closest('a, button')) { abrir(+card.dataset.n); return; }
+    const a = t.closest('a[href^="#"]');
+    if (a && aberto !== null) { ev.preventDefault(); fechar(document.getElementById(a.getAttribute('href').slice(1))); }
+  });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && aberto !== null) fechar(); });
+
+  function pelaHash() { const m = location.hash.match(/^#p(\d{2})$/); if (m && P[+m[1]]) abrir(+m[1]); }
+  window.addEventListener('hashchange', pelaHash);
+  marcar();
+  pelaHash();
+})();
+</script>
+</html>
